@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 28.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="400px"
+	 height="400px" viewBox="0 0 400 400" style="enable-background:new 0 0 400 400;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;}
+	.st1{display:inline;}
+	.st2{fill:#505050;}
+	.st3{fill:none;stroke:#505050;stroke-width:0.2;stroke-miterlimit:10;}
+	.st4{fill:none;stroke:#A799F5;stroke-width:16;stroke-linecap:square;stroke-miterlimit:10;}
+	.st5{fill:none;stroke:#62D0C2;stroke-width:16;stroke-linecap:square;stroke-miterlimit:10;}
+	.st6{fill:none;stroke:#62D0C2;stroke-width:16.8403;stroke-linecap:square;stroke-miterlimit:10;}
+	.st7{fill:none;stroke:#A799F5;stroke-width:16.8403;stroke-linecap:square;stroke-miterlimit:10;}
+	.st8{fill-rule:evenodd;clip-rule:evenodd;fill:#A799F5;}
+	.st9{fill:none;stroke:#93C3B1;stroke-width:16;stroke-linecap:square;stroke-miterlimit:10;}
+	.st10{fill:none;stroke:#D6639B;stroke-width:16;stroke-linecap:square;stroke-miterlimit:10;}
+	.st11{fill:none;stroke:#D6639B;stroke-width:16.8403;stroke-linecap:square;stroke-miterlimit:10;}
+	.st12{fill:none;stroke:#93C3B1;stroke-width:16.8403;stroke-linecap:square;stroke-miterlimit:10;}
+	.st13{fill-rule:evenodd;clip-rule:evenodd;fill:#93C3B1;}
+	.st14{fill:none;stroke:#7367BF;stroke-width:16;stroke-linecap:square;stroke-miterlimit:10;}
+	.st15{fill:none;stroke:#DC808D;stroke-width:16;stroke-linecap:square;stroke-miterlimit:10;}
+	.st16{fill:none;stroke:#DC808D;stroke-width:16.8403;stroke-linecap:square;stroke-miterlimit:10;}
+	.st17{fill:none;stroke:#7367BF;stroke-width:16.8403;stroke-linecap:square;stroke-miterlimit:10;}
+	.st18{fill-rule:evenodd;clip-rule:evenodd;fill:#7367BF;}
+	.st19{fill:none;stroke:#9589E2;stroke-width:16;stroke-linecap:square;stroke-miterlimit:10;}
+	.st20{fill:none;stroke:#F8B2BC;stroke-width:16;stroke-linecap:square;stroke-miterlimit:10;}
+	.st21{fill:none;stroke:#F8B2BC;stroke-width:16.8403;stroke-linecap:square;stroke-miterlimit:10;}
+	.st22{fill:none;stroke:#9589E2;stroke-width:16.8403;stroke-linecap:square;stroke-miterlimit:10;}
+	.st23{fill-rule:evenodd;clip-rule:evenodd;fill:#9589E2;}
+	.st24{fill:#EC9BBD;}
+	.st25{fill-rule:evenodd;clip-rule:evenodd;fill:#62D0C2;}
+	.st26{fill-rule:evenodd;clip-rule:evenodd;fill:#7A6AC7;}
+	.st27{fill-rule:evenodd;clip-rule:evenodd;fill:#3EA092;}
+	.st28{fill-rule:evenodd;clip-rule:evenodd;fill:#5A348B;}
+	.st29{fill-rule:evenodd;clip-rule:evenodd;fill:#E88553;}
+	.st30{fill-rule:evenodd;clip-rule:evenodd;fill:#DD00F4;}
+	.st31{fill-rule:evenodd;clip-rule:evenodd;fill:#37F1E5;}
+	.st32{fill-rule:evenodd;clip-rule:evenodd;fill:#6851A9;}
+	.st33{fill-rule:evenodd;clip-rule:evenodd;fill:#F87700;}
+	.st34{fill-rule:evenodd;clip-rule:evenodd;fill:#E62D79;}
+	.st35{fill-rule:evenodd;clip-rule:evenodd;fill:#ED9100;}
+	.st36{fill-rule:evenodd;clip-rule:evenodd;fill:#E300C4;}
+	.st37{fill-rule:evenodd;clip-rule:evenodd;fill:#E37B00;}
+	.st38{fill-rule:evenodd;clip-rule:evenodd;fill:#DC5C00;}
+	.st39{fill-rule:evenodd;clip-rule:evenodd;fill:#E7B7DA;}
+	.st40{fill-rule:evenodd;clip-rule:evenodd;fill:#D6639B;}
+	.st41{fill-rule:evenodd;clip-rule:evenodd;fill:#A2D2C0;}
+	.st42{fill-rule:evenodd;clip-rule:evenodd;fill:#EA86BB;}
+	.st43{fill-rule:evenodd;clip-rule:evenodd;fill:#DC808D;}
+	.st44{fill-rule:evenodd;clip-rule:evenodd;fill:#F8B2BC;}
+	.st45{fill:#6851A9;}
+	.st46{fill:#E97F75;}
+	.st47{fill:#F87700;}
+	.st48{fill:#E7B7DA;}
+	.st49{fill:#DC5C00;}
+	.st50{fill:#E62D79;}
+	.st51{fill:#ED9100;}
+	.st52{fill:#37F1E5;}
+	.st53{fill:#DD00F4;}
+	.st54{fill:#710078;}
+	.st55{fill:#2D0082;}
+	.st56{fill:#26AEAC;}
+	.st57{fill:#1C7900;}
+	.st58{fill:#FFFF00;}
+	.st59{fill:#F77300;}
+	.st60{fill:#F50000;}
+	.st61{fill:#F54DA0;}
+	.st62{fill:none;stroke:#E97F75;stroke-width:53;stroke-linecap:square;stroke-miterlimit:10;}
+	.st63{fill-rule:evenodd;clip-rule:evenodd;fill:#F50000;}
+	.st64{fill:#0C22DF;}
+	.st65{fill-rule:evenodd;clip-rule:evenodd;fill:#795AAC;}
+	.st66{fill:none;stroke:#795AAC;stroke-width:48;stroke-linecap:square;stroke-miterlimit:10;}
+	.st67{fill:#795AAC;}
+	.st68{fill:none;stroke:#E97F75;stroke-width:48;stroke-linecap:square;stroke-miterlimit:10;}
+	.st69{fill:none;stroke:#F87700;stroke-width:45;stroke-miterlimit:10;}
+	.st70{fill:none;stroke:#6851A9;stroke-width:45;stroke-linecap:square;stroke-miterlimit:10;}
+	.st71{fill:none;stroke:#6851A9;stroke-width:45;stroke-miterlimit:10;}
+	.st72{fill:none;stroke:#F87700;stroke-width:45;stroke-linecap:square;stroke-miterlimit:10;}
+	.st73{fill:none;stroke:#0C22DF;stroke-width:45;stroke-linecap:square;stroke-miterlimit:10;}
+</style>
+<g id="hilfslinien" class="st0">
+	<g class="st1">
+		<g>
+			<g>
+				<path class="st2" d="M200,35.6c43.9,0,85.2,17.1,116.3,48.1c31,31,48.1,72.3,48.1,116.3s-17.1,85.2-48.1,116.3
+					s-72.3,48.1-116.3,48.1s-85.2-17.1-116.3-48.1S35.6,243.9,35.6,200s17.1-85.2,48.1-116.3C114.8,52.7,156.1,35.6,200,35.6
+					 M200,35.4C109,35.4,35.4,109,35.4,200S109,364.6,200,364.6S364.6,291,364.6,200S291,35.4,200,35.4L200,35.4z"/>
+			</g>
+			<g>
+				<path class="st2" d="M200,63c36.6,0,71,14.2,96.9,40.1C322.7,129,337,163.4,337,200c0,36.6-14.2,71-40.1,96.9
+					C271,322.7,236.6,337,200,337s-71-14.2-96.9-40.1C77.3,271,63,236.6,63,200c0-36.6,14.2-71,40.1-96.9C129,77.3,163.4,63,200,63
+					 M200,62.8c-75.8,0-137.2,61.3-137.2,137.2S124.2,337.2,200,337.2S337.2,275.8,337.2,200S275.8,62.8,200,62.8L200,62.8z"/>
+			</g>
+			<g>
+				<path class="st2" d="M200,90.5c29.3,0,56.8,11.4,77.5,32.1c20.7,20.7,32.1,48.2,32.1,77.5s-11.4,56.8-32.1,77.5
+					c-20.7,20.7-48.2,32.1-77.5,32.1s-56.8-11.4-77.5-32.1c-20.7-20.7-32.1-48.2-32.1-77.5s11.4-56.8,32.1-77.5
+					C143.2,101.9,170.7,90.5,200,90.5 M200,90.3c-60.6,0-109.7,49.1-109.7,109.7S139.4,309.7,200,309.7S309.7,260.6,309.7,200
+					S260.6,90.3,200,90.3L200,90.3z"/>
+			</g>
+			<g>
+				<path class="st2" d="M200,117.9c21.9,0,42.6,8.5,58.1,24c15.5,15.5,24,36.1,24,58.1s-8.5,42.6-24,58.1s-36.1,24-58.1,24
+					s-42.6-8.5-58.1-24s-24-36.1-24-58.1s8.5-42.6,24-58.1C157.4,126.4,178.1,117.9,200,117.9 M200,117.7
+					c-45.5,0-82.3,36.8-82.3,82.3s36.8,82.3,82.3,82.3s82.3-36.8,82.3-82.3S245.5,117.7,200,117.7L200,117.7z"/>
+			</g>
+			<g>
+				<path class="st2" d="M200,145.3c30.1,0,54.7,24.5,54.7,54.7s-24.5,54.7-54.7,54.7s-54.7-24.5-54.7-54.7S169.9,145.3,200,145.3
+					 M200,145.1c-30.3,0-54.9,24.5-54.9,54.9c0,30.3,24.5,54.9,54.9,54.9s54.9-24.5,54.9-54.9C254.9,169.7,230.3,145.1,200,145.1
+					L200,145.1z"/>
+			</g>
+			<g>
+				<path class="st2" d="M200,172.8c15,0,27.2,12.2,27.2,27.2S215,227.2,200,227.2S172.8,215,172.8,200S185,172.8,200,172.8
+					 M200,172.6c-15.2,0-27.4,12.3-27.4,27.4s12.3,27.4,27.4,27.4s27.4-12.3,27.4-27.4S215.2,172.6,200,172.6L200,172.6z"/>
+			</g>
+		</g>
+		<g>
+			<line class="st3" x1="200" y1="200" x2="200" y2="364.6"/>
+			<line class="st3" x1="200" y1="200" x2="271.4" y2="348.3"/>
+			<line class="st3" x1="200" y1="200" x2="328.7" y2="302.6"/>
+			<line class="st3" x1="200" y1="200" x2="360.5" y2="236.6"/>
+			<line class="st3" x1="200" y1="200" x2="360.5" y2="163.4"/>
+			<line class="st3" x1="200" y1="200" x2="328.7" y2="97.4"/>
+			<line class="st3" x1="200" y1="200" x2="271.4" y2="51.7"/>
+			<line class="st3" x1="200" y1="200" x2="200" y2="35.4"/>
+			<line class="st3" x1="200" y1="200" x2="128.6" y2="51.7"/>
+			<line class="st3" x1="200" y1="200" x2="71.3" y2="97.4"/>
+			<line class="st3" x1="200" y1="200" x2="39.5" y2="163.4"/>
+			<line class="st3" x1="200" y1="200" x2="39.5" y2="236.6"/>
+			<line class="st3" x1="200" y1="200" x2="71.3" y2="302.6"/>
+			<line class="st3" x1="200" y1="200" x2="128.6" y2="348.3"/>
+		</g>
+	</g>
+</g>
+<g id="logo">
+</g>
+<g id="RZ_Logo">
+	<g>
+		<g>
+			<polyline class="st70" points="251.3,278.4 314.7,205.2 251.3,131.9 			"/>
+			<g>
+				<path class="st45" d="M218.6,292.7l23.1,20l10.2-0.7l16.3-18.9l-34-29.5l-16.3,18.9L218.6,292.7z"/>
+			</g>
+			<g>
+				<path class="st45" d="M218.6,117.6l23.1-20l10.2,0.7l16.3,18.9l-34,29.5l-16.3-18.9L218.6,117.6z"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<line class="st69" x1="103.5" y1="202.2" x2="209.2" y2="202.2"/>
+			<g>
+				<path class="st47" d="M71.3,186.9v30.6l7.2,7.2h25v-45h-25L71.3,186.9z"/>
+			</g>
+			<g>
+				<path class="st47" d="M241.3,186.9v30.6l-7.2,7.2h-25v-45h25L241.3,186.9z"/>
+			</g>
+		</g>
+	</g>
+</g>
+<g id="grid" class="st0">
+</g>
+</svg>

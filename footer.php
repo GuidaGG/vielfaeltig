@@ -1,4 +1,5 @@
 
+
 </main>
 
 <?php do_action( 'tailpress_content_end' ); ?>
@@ -7,11 +8,44 @@
 
 <?php do_action( 'tailpress_content_after' ); ?>
 
-<footer id="colophon" class="site-footer bg-gray-50 py-12" role="contentinfo">
+<footer id="colophon" class="site-footer bg-primary py-12 px-16 text-white" role="contentinfo">
 	<?php do_action( 'tailpress_footer' ); ?>
 
-	<div class="container mx-auto text-center text-gray-500">
-		&copy; <?php echo date_i18n( 'Y' );?> - <?php echo get_bloginfo( 'name' );?>
+	<div class=" max-w-screen-xl mx-auto  flex justify-between">
+		<div>
+			<?php display_contact_info() ?>
+		</div>
+		<div>
+			<?php
+				wp_nav_menu(
+					array(
+						'container_id'    => 'footer-1-menu',
+						'container_class' => 'menu-container',
+						'menu_class'      => 'menu',
+						'theme_location'  => 'footer_1',
+						'li_class'        => '',
+						'fallback_cb'     => false,
+					)
+				);
+			?>
+		</div>
+		<div>
+			<?php
+				wp_nav_menu(
+					array(
+						'container_id'    => 'footer-2-menu',
+						'container_class' => 'menu-container',
+						'menu_class'      => 'menu',
+						'theme_location'  => 'footer_2',
+						'li_class'        => '',
+						'fallback_cb'     => false,
+					)
+				);
+			?>	
+		</div>
+	</div>
+	<div class="max-w-screen-xl mx-auto mt-10">
+		<?php display_footer_images() ?>
 	</div>
 </footer>
 

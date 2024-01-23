@@ -16,3 +16,12 @@ body {
 .wp-block[data-align=full] {
     @apply max-w-full;
 }
+
+.wp-block-button, .wp-element-button {
+    @apply bg-dark-bg rounded-full p-2 
+
+}
+
+.arrow img {
+    @apply w-20 h-20 
+}

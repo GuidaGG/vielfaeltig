@@ -9,6 +9,9 @@ function tailpress_setup() {
 	register_nav_menus(
 		array(
 			'primary' => __( 'Primary Menu', 'tailpress' ),
+			'secondary' => __( 'Secondary Menu', 'tailpress' ),
+			'footer_1'=> __( 'Footer 1 Menu', 'tailpress' ),
+			'footer_2'=> __( 'Footer 2 Menu', 'tailpress' ),
 		)
 	);
 
@@ -43,6 +46,10 @@ function tailpress_enqueue_scripts() {
 
 	wp_enqueue_style( 'tailpress', tailpress_asset( 'css/app.css' ), array(), $theme->get( 'Version' ) );
 	wp_enqueue_script( 'tailpress', tailpress_asset( 'js/app.js' ), array(), $theme->get( 'Version' ) );
+	   // Pass data to JavaScript
+	   wp_localize_script('tailpress', 'themeData', array(
+        'templateDirectoryUri' => get_template_directory_uri(),
+    ));
 }
 
 add_action( 'wp_enqueue_scripts', 'tailpress_enqueue_scripts' );
@@ -107,3 +114,96 @@ function tailpress_nav_menu_add_submenu_class( $classes, $args, $depth ) {
 }
 
 add_filter( 'nav_menu_submenu_css_class', 'tailpress_nav_menu_add_submenu_class', 10, 3 );
+
+
+/**
+ * Custom: allow SVG upload.
+ */
+
+ function cc_mime_types($mimes) {
+	$mimes['svg'] = 'image/svg+xml';
+	return $mimes;
+  }
+  add_filter('upload_mimes', 'cc_mime_types');
+
+
+/**
+ * Custom: add Contact Section to customizer.
+ */
+
+ function my_customizer_sections($wp_customize) {
+    $wp_customize->add_section('contact_info_section', array(
+        'title'    => __('Contact Info', 'your-theme-textdomain'),
+        'priority' => 30,
+    ));
+
+    // Add a setting for Contact Info with 'textarea' type
+    $wp_customize->add_setting('contact_info_setting', array(
+        'default'           => '',
+        'sanitize_callback' => 'sanitize_textarea_field_with_line_breaks',
+    ));
+
+    // Add a control for Contact Info
+    $wp_customize->add_control('contact_info_control', array(
+        'label'    => __('Contact Info', 'your-theme-textdomain'),
+        'section'  => 'contact_info_section',
+        'settings' => 'contact_info_setting',
+        'type'     => 'textarea',
+    ));
+}
+add_action('customize_register', 'my_customizer_sections');
+
+// Sanitize textarea with line breaks
+function sanitize_textarea_field_with_line_breaks($input) {
+    return wp_kses_post(nl2br($input));
+}
+
+// Display the Contact Info in your theme
+function display_contact_info() {
+    $contact_info = get_theme_mod('contact_info_setting', '');
+
+    if (!empty($contact_info)) {
+        echo '<div class="contact-info">' . $contact_info . '</div>';
+    }
+}
+
+
+/**
+ * Custom: add Partner Section to Customizer
+ */
+
+function my_customizer_footer_section($wp_customize) {
+    $wp_customize->add_section('partner_section', array(
+        'title'    => __('Partner', 'tailpress'),
+        'priority' => 200,
+    ));
+
+    // Add setting for Footer Images
+    for ($i = 1; $i <= 5; $i++) {
+        $wp_customize->add_setting('partner_' . $i, array(
+            'default'           => '',
+            'sanitize_callback' => 'esc_url_raw',
+        ));
+
+        // Add control for Footer Images
+        $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'partner_' . $i, array(
+            'label'    => __('Image ' . $i, 'tailpress'),
+            'section'  => 'partner_section',
+            'settings' => 'partner_' . $i,
+        )));
+    }
+}
+add_action('customize_register', 'my_customizer_footer_section');
+
+// Display Footer Images in your theme
+function display_footer_images() {
+    echo '<h3>Partner</h3><div class="footer-images">';
+	
+    for ($i = 1; $i <= 6; $i++) {
+        $image_url = get_theme_mod('partner_' . $i, '');
+        if ($image_url) {
+            echo '<img src="' . esc_url($image_url) . '" alt="Partner ' . $i . '">';
+        }
+    }
+    echo '</div>';
+}

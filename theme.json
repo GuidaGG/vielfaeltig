@@ -34,12 +34,12 @@
         {
           "name": "Small",
           "slug": "small",
-          "size": "0.875rem"
+          "size": "0.6rem"
         },
         {
           "slug": "regular",
           "name": "Regular",
-          "size": "1.5rem"
+          "size": "1.6rem"
         },
         {
           "slug": "large",
