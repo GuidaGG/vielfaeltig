@@ -21,7 +21,7 @@ window.addEventListener('load', function () {
     main_navigation.classList.toggle('hidden');
   });
 
-  /* Custom buttons class */
+  /* Custom buttons creator */
 
   var buttons = document.querySelectorAll('.wp-element-button');
 
