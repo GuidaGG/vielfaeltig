@@ -23,7 +23,7 @@
 				<div class="inner-container h-16 md:h-32 max-w-screen-xl mx-auto flex justify-between items-center">
 					<div>
 						<?php if ( has_custom_logo() ) { ?>
-              <?php the_custom_logo(); ?>
+              			<?php the_custom_logo(); ?>
 						<?php } else { ?>
 							<a href="<?php echo get_bloginfo( 'url' ); ?>" class="font-extrabold text-lg uppercase">
 								<?php echo get_bloginfo( 'name' ); ?>
@@ -59,7 +59,7 @@
 		</div>
 	</header>
 
-	<div id="sidebar" class="fixed h-dvh top-0 right-0 translate-x-full transition-transform duration-300 ease-in-out w-[80vw] md:w-[500px] text-secondary bg-white px-4 py-10 z-10">
+	<div id="sidebar" class="fixed h-dvh top-0 right-0 translate-x-full transition-transform duration-300 ease-in-out w-[80vw] md:w-[500px] text-secondary bg-white px-4 py-10 z-10 special-shadow">
 		<a href="#" aria-label="Toggle navigation" class="button mb-8" id="sidebar-menu-toggle" >
 			<img src="<?php echo get_template_directory_uri(); ?>/resources/images/ENT_vielfaeltig_Arrow.svg" alt="Arrow Icon" >
 		</a>
