@@ -7,44 +7,64 @@
   \*****************************/
 /***/ (() => {
 
-// Navigation toggle
 window.addEventListener('load', function () {
-  /* Toggle menu */
-
+  /* --- toggle menu --- */
   var main_navigation = document.querySelector('#sidebar');
   document.querySelector('#primary-menu-toggle').addEventListener('click', function (e) {
     e.preventDefault();
-    main_navigation.classList.toggle('hidden');
+    main_navigation.classList.toggle('show');
   });
   document.querySelector('#sidebar-menu-toggle').addEventListener('click', function (e) {
     e.preventDefault();
-    main_navigation.classList.toggle('hidden');
+    main_navigation.classList.toggle('show');
   });
 
-  /* Custom buttons creator */
-
+  /* --- custom buttons --- */
   var buttons = document.querySelectorAll('.wp-element-button');
-
-  // Iterate through each button
   buttons.forEach(function (button) {
-    console.log(button);
-    // Check if the innerText is "arrow"
+    var imgElement = document.createElement('img');
     if (button.innerText.trim().toLowerCase() === 'arrow') {
-      // Add the "arrow" class
       button.classList.add('arrow');
-      var imgElement = document.createElement('img');
-
-      // Set the src attribute to "image.svg"
+      button.innerHTML = '';
       imgElement.src = "".concat(themeData.templateDirectoryUri, "/resources/images/ENT_vielfaeltig_Arrow.svg");
-
-      // Append the img element to the button
-      button.innerHTML = ''; // Remove existing content
-      button.appendChild(imgElement);
+      button.setAttribute('href', 'https://queer-lexikon.net/glossar/');
+    }
+    if (button.innerText.trim().toLowerCase() === 'whatsapp') {
+      button.classList.add('whatsapp');
+      button.innerHTML = '';
+      imgElement.src = "".concat(themeData.templateDirectoryUri, "/resources/images/whatsapp.svg");
+      imgElement.style.padding = '0.7rem';
+      button.setAttribute('href', 'https://wa.me/000');
     }
     if (button.innerText.trim().toLowerCase() === 'instagram') {
-      // Add the "arrow" class
       button.classList.add('instagram');
     }
+    button.setAttribute('target', '_blank');
+    button.appendChild(imgElement);
+  });
+
+  /* --- drop-down parts --- */
+  var details = document.querySelectorAll('.wp-block-details');
+  details.forEach(function (detail) {
+    var summary = detail.children[0];
+    var arrowContainer = document.createElement('div');
+    arrowContainer.classList.add('wp-element-button');
+    arrowContainer.classList.add('shrink-0');
+    var arrowImage = document.createElement('img');
+    arrowImage.className = 'transition-transform duration-200';
+    arrowImage.src = "".concat(themeData.templateDirectoryUri, "/resources/images/ENT_vielfaeltig_Arrow.svg");
+    arrowContainer.appendChild(arrowImage);
+    summary.appendChild(arrowContainer);
+    summary.addEventListener('click', function (e) {
+      detail.classList.toggle('show');
+      if (detail.classList.contains('show')) {
+        // img.style.transform = 'rotate(90deg)';
+        arrowImage.classList.add('rotate-90');
+      } else {
+        // img.style.transform = 'rotate(0deg)';
+        arrowImage.classList.remove('rotate-90');
+      }
+    });
   });
 });
 

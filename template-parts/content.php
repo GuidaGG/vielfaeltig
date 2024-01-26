@@ -1,5 +1,4 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'mb-12' ); ?>>
-
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<?php if ( is_search() || is_archive() ) : ?>
 
@@ -9,7 +8,8 @@
 
 	<?php else : ?>
 
-		<div class="entry-content">
+		<!-- fago CONTENT CONTAINER 03 (content.php) mb-12? -->
+		<div class="entry-content max-w-screen-xl mx-auto pt-20 pb-28 md:pt-32 px-6 md:px-16">
 			<?php
 			/* translators: %s: Name of current post */
 			the_content(

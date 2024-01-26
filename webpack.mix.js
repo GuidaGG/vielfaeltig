@@ -18,7 +18,7 @@ mix.postCss("resources/css/app.css", "css");
 
 mix.postCss("resources/css/editor-style.css", "css");
 
-mix.browserSync('http://localhost/vielfaeltig/');
+mix.browserSync('http://localhost/24-01_vielfaeltig/');
 
 
 if (mix.inProduction()) {

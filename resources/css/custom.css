@@ -1,108 +1,172 @@
-/* general */
+:root {
+  --font-lg: 1.4rem;
+  --font-sm: 0.9rem;
+
+  --shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3);
+  --clip-path: inset(0px -30px 0px -30px);
+}
+
 html {
-    font-size: 28px; 
+  font-size: var(--font-lg);
+  line-height: 1.2;
+}
+.button,
+.wp-element-button {
+  @apply block bg-dark-bg p-0 h-10 w-10 md:w-16 md:h-16 rounded-full shadow-inner;
+  
+  & img {
+    @apply w-full h-full;
+  }
 }
 
-.button {
-    @apply block bg-dark-bg w-16 h-16 rounded-full shadow-inner
 
+/* --------- HEADER --------- */
+header {
+  .custom-logo-link {
+    @apply relative -left-2 md:-left-4;
+  }
+  .custom-logo-link img {
+    @apply w-40 md:w-72;
+  }
 }
 
+/* --------- SIDE BAR --------- */
 .menu {
-    @apply  font-medium;
+  @apply font-medium;
+}
+
+#sidebar {
+  box-shadow: var(--shadow);
+  clip-path: var(--clip-path);
+
+  #primary-menu,
+  #secondary-menu {
+    @apply my-6;
+  }
+}
+
+#sidebar.show {
+  @apply translate-x-0
+}
+
+
+/* --------- CONTENT --------- */
+.entry-content,
+.block-editor-block-list__layout {
+
+  box-shadow: var(--shadow);
+  clip-path: var(--clip-path);
+
+  h1 {
+    @apply text-4xl;
+  }
+
+  h2 {
+    /* @apply sticky top-12 */
+    @apply text-3xl pl-28 md:pl-44 font-bold relative mt-6;
+  }
+
+  h3 {
+    @apply text-lg;
+  }
+
+
+  p, ul, ol {
+    @apply m-0 mb-8;
+    
+    a {
+      @apply text-black underline;
+
+      &:hover {
+        @apply no-underline;
+      }
+    }
+  }
+
+  ul:not(.block-editor-block-variation-picker__variations) {
+    li {
+      @apply list-disc list-inside;
+    }
+  }
+
+  ol {
+    li {
+      @apply list-decimal list-inside;
+    }
+  }
+
+  .wp-block-quote {
+    @apply border-none pl-0;
+    
+    p {
+      @apply inline font-bold ;
+    }
+
+    cite {
+      @apply inline text-small;
+    }
+  }
+  
+
+  .wp-block-image {
+    @apply md:w-96;
+  }
+
+  /* .wp-element-button {
+    @apply bg-dark-bg rounded-full p-0 shadow-inner 
+  } */
+
+  /* .arrow img {
+    @apply w-16 h-16
+  } */
+
+  .wp-block-details {
+    @apply border-y-2 border-gray-300 py-4 ;
+
+    & summary {
+      @apply list-none flex justify-between items-center flex-shrink;
+    }
+
+    & p {
+      @apply my-6;
+    }
+  }
+
+}
+
+
+/* --------- FOOTER --------- */
+footer {
+  .footer-images {
+    @apply h-12 grid grid-cols-6;
+  }
+  img { 
+    @apply max-w-28;
+  }
+  /* .contact-info {
+    background-color: aqua
+  } */
+  /* .menu-container {
+    background-color: blue;
+  } */
 }
 
 
 
-/* content area */
-.entry-content, .block-editor-block-list__layout {
+/* * * * * * LARGER SCREENS * * * * * */
+@screen md {
+  :root {
+    --font-lg: 1.8rem;
+    --font-sm: 1.2rem;
+  }
+  .entry-content,
+  .block-editor-block-list__layout {
     h1 {
-        @apply text-5xl;
+      @apply text-5xl;
     }
 
     h2 {
-        @apply text-4xl pl-44;
+      @apply text-4xl;
     }
-
-    h3 {
-        @apply text-lg;
-    }
-
-
-    p, ul, ol {
-        a {
-            @apply text-black underline;
-
-            &:hover {
-                @apply no-underline;
-            }
-        }
-
-        @apply m-0 mb-8;
-    }
-
-    ul:not(.block-editor-block-variation-picker__variations) {
-        li {
-            @apply list-disc list-inside;
-        }
-    }
-
-    ol {
-        li {
-            @apply list-decimal list-inside;
-        }
-    }
-
-    .wp-block-quote {
-
-        p {
-            @apply inline font-bold ;
-        }
-
-        cite {
-            @apply inline text-small;
-        }
-        @apply  border-none pl-0;
-    }
-   
-
-    .wp-element-button {
-
-        @apply bg-dark-bg rounded-full p-0 shadow-inner 
-
-    }
-
-    .arrow img {
-        @apply w-16 h-16
-    }
-
+  }
 }
-
-/* header area */
-header {
-    .custom-logo-link img{ 
-        @apply w-72 -ml-14;
-    }
-
-  
-    #primary-menu {
-    
-    
-    }
-    
-    #secondary-menu {
-    
-    }
-
-}
-
-footer {
-    .footer-images{
-        @apply grid grid-cols-6;
-    }
-    img { 
-        @apply max-w-28;
-    }
-}
-
-

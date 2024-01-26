@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
-<div class="mx-auto">
+<!-- fago CONTENT CONTAINER 02 (index.php) -->
+<div >
 
 	<?php if ( have_posts() ) : ?>
 		<?php
