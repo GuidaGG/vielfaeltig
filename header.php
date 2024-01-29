@@ -89,10 +89,21 @@
 			);
 		?>
 	</div>
-
 	<!-- fago CONTENT CONTAINER 01 (header.php) -->
 	<div id="content" class="flex-grow relative z-0">
-
+		<?php
+			wp_nav_menu(
+				array(
+					'container_id'    => 'sticky-menu',
+					'container_class' => 'menu-container',
+					'menu_class'      => 'menu',
+					'theme_location'  => 'sticky_menu',
+					'li_class'        => '',
+					'fallback_cb'     => false,
+				)
+			);
+		?>
+		
 		<?php if ( is_front_page() ) { ?>
 		
 		<?php } ?>
