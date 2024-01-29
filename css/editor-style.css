@@ -124,8 +124,8 @@
 .w-full {
     width: 100%
 }
-.max-w-screen-xl {
-    max-width: 1280px
+.max-w-screen-3xl {
+    max-width: 1600px
 }
 .max-w-sm {
     max-width: 24rem
@@ -310,6 +310,10 @@
     font-size: 3rem;
     line-height: 1
 }
+.text-base {
+    font-size: 1rem;
+    line-height: 1.5rem
+}
 .text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem
@@ -368,6 +372,9 @@
     --tw-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
     --tw-shadow-colored: inset 0 2px 4px 0 var(--tw-shadow-color);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+}
+.filter {
+    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)
 }
 .transition-transform {
     transition-property: transform;
@@ -435,10 +442,10 @@ body {
     font-family: Round, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
 }
 .wp-block {
-    max-width: 1280px
+    max-width: 1440px
 }
 .wp-block[data-align=wide] {
-    max-width: 1280px
+    max-width: 1440px
 }
 .wp-block[data-align=full] {
     max-width: 100%
@@ -457,6 +464,9 @@ body {
     --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+}
+.focus\:outline-primary:focus {
+    outline-color: #8671D8
 }
 @media (min-width: 600px) {
     .sm\:grid-cols-2 {
@@ -525,3 +535,5 @@ body {
         grid-template-columns: repeat(3, minmax(0, 1fr))
     }
 }
+
+

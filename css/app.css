@@ -618,8 +618,8 @@ video {
 .w-full {
   width: 100%;
 }
-.max-w-screen-xl {
-  max-width: 1280px;
+.max-w-screen-3xl {
+  max-width: 1600px;
 }
 .max-w-sm {
   max-width: 24rem;
@@ -804,6 +804,10 @@ video {
   font-size: 3rem;
   line-height: 1;
 }
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -862,6 +866,9 @@ video {
   --tw-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: inset 0 2px 4px 0 var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 .transition-transform {
   transition-property: transform;
@@ -953,6 +960,12 @@ html {
   --tw-shadow-colored: inset 0 2px 4px 0 var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
+.button:hover,
+.wp-element-button:hover {
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
 @media (min-width: 782px) {
 
   .button,
@@ -967,6 +980,9 @@ html {
 }
 .menu {
   font-weight: 500;
+}
+a:focus, summary:focus {
+  outline-color: #8671D8;
 }
 .special-shadow {
   box-shadow: var(--shadow);
@@ -1148,6 +1164,12 @@ footer .footer-images img {
     line-height: 2.5rem;
   }
 }
+/* * * * * * SPECIAL * * * * * */
+/* Make H1 in homepage look like normal text / Heading necessary for acessility and SEO*/
+.home main h1:first-of-type {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
 @font-face {
     font-family: 'Round';
     src: url(../fonts/Round_WEB-Book.woff2?7b652277fc3e59f255790a5ef0d3e5e2) format('woff2'),
@@ -1168,6 +1190,9 @@ footer .footer-images img {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.focus\:outline-primary:focus {
+  outline-color: #8671D8;
 }
 @media (min-width: 600px) {
 

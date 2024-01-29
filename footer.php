@@ -3,7 +3,7 @@
 </main>
 
 <div class="w-full absolute bottom-0 h-28">
-	<div class="h-full max-w-screen-xl mx-auto flex gap-4 items-end justify-end p-6">
+	<div class="h-full max-w-screen-3xl mx-auto flex gap-4 items-end justify-end p-6">
 		<div> Züruck nach oben </div>
 		<a href="#" aria-label="Toggle navigation" class="button -rotate-90" id="sidebar-menu-toggle" >
 			<img src="<?php echo get_template_directory_uri(); ?>/resources/images/ENT_vielfaeltig_Arrow.svg" alt="Arrow Icon">
@@ -19,7 +19,7 @@
 
 <footer id="colophon" class="site-footer  text-white" role="contentinfo">
 	<?php do_action( 'tailpress_footer' ); ?>
-	<div class="footer-shadow max-w-screen-xl mx-auto px-6 md:px-16 bg-primary py-10 md:py-20 special-shadow">
+	<div class="footer-shadow max-w-screen-3xl mx-auto px-6 md:px-16 bg-primary py-10 md:py-20 special-shadow">
 		<div class=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 ">
 			<div>
 				<?php display_contact_info() ?>
