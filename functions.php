@@ -12,6 +12,7 @@ function tailpress_setup() {
 			'secondary' => __( 'Secondary Menu', 'tailpress' ),
 			'footer_1'=> __( 'Footer 1 Menu', 'tailpress' ),
 			'footer_2'=> __( 'Footer 2 Menu', 'tailpress' ),
+            'sticky_menu' => __( 'Sticky Menu', 'tailpress' ),
 		)
 	);
 
@@ -206,4 +207,95 @@ function display_footer_images() {
         }
     }
     echo '</div>';
+}
+
+/**
+ * Register customizer section for sticky buttons
+ */
+
+function customize_sticky_buttons_section($wp_customize) {
+    $wp_customize->add_section('sticky_buttons_section', array(
+        'title' => __('Sticky Buttons', 'your-theme'),
+        'priority' => 200,
+    ));
+
+    // Loop to create four elements
+    for ($i = 1; $i <= 4; $i++) {
+        // Field 1: First Title
+        $wp_customize->add_setting("sticky_button_${i}_first_title", array(
+            'default' => '',
+            'sanitize_callback' => 'sanitize_text_field',
+        ));
+
+        $wp_customize->add_control("sticky_button_${i}_first_title", array(
+            'label' => __('First Title', 'your-theme'),
+            'section' => 'sticky_buttons_section',
+            'type' => 'text',
+            'priority' => $i * 10,
+        ));
+
+        // Field 2: Second Title
+        $wp_customize->add_setting("sticky_button_${i}_second_title", array(
+            'default' => '',
+            'sanitize_callback' => 'sanitize_text_field',
+        ));
+
+        $wp_customize->add_control("sticky_button_${i}_second_title", array(
+            'label' => __('Second Title', 'your-theme'),
+            'section' => 'sticky_buttons_section',
+            'type' => 'text',
+            'priority' => $i * 10 + 1,
+        ));
+
+        // Field 3: Href
+        $wp_customize->add_setting("sticky_button_${i}_href", array(
+            'default' => '',
+            'sanitize_callback' => 'esc_url_raw',
+        ));
+
+        $wp_customize->add_control("sticky_button_${i}_href", array(
+            'label' => __('Href', 'your-theme'),
+            'section' => 'sticky_buttons_section',
+            'type' => 'url',
+            'priority' => $i * 10 + 2,
+        ));
+    }
+}
+
+add_action('customize_register', 'customize_sticky_buttons_section');
+
+/**
+ * Display sticky buttons navigation
+ */
+
+function display_sticky_buttons_navigation() {
+    // Retrieve sticky button values from customizer
+    $sticky_buttons = array();
+
+    for ($i = 1; $i <= 4; $i++) {
+        $first_title = get_theme_mod("sticky_button_${i}_first_title");
+        $second_title = get_theme_mod("sticky_button_${i}_second_title");
+        $href = get_theme_mod("sticky_button_${i}_href");
+
+        // Check if all required fields are set
+        if ($first_title && $second_title && $href) {
+            $sticky_buttons[] = array(
+                'first_title' => $first_title,
+                'second_title' => $second_title,
+                'href' => $href,
+            );
+        }
+    }
+
+    // Display navigation if there are sticky buttons
+    if (!empty($sticky_buttons)) {
+        echo '<ul class="sticky-buttons-navigation">';
+        foreach ($sticky_buttons as $button) {
+            echo '<li><a href="' . esc_url($button['href']) . '">';
+            echo '<span class="first-title">' . esc_html($button['first_title']) . '</span>';
+            echo '<span class="second-title">' . esc_html($button['second_title']) . '</span>';
+            echo '</a></li>';
+        }
+        echo '</ul>';
+    }
 }

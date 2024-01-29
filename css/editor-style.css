@@ -97,18 +97,6 @@
 .h-full {
     height: 100%
 }
-.h-auto {
-    height: auto
-}
-.max-h-full {
-    max-height: 100%
-}
-.max-h-20 {
-    max-height: 5rem
-}
-.max-h-28 {
-    max-height: 7rem
-}
 .min-h-screen {
     min-height: 100vh
 }
@@ -130,20 +118,17 @@
 .w-\[80vw\] {
     width: 80vw
 }
-.w-full {
-    width: 100%
-}
 .w-auto {
     width: auto
+}
+.w-full {
+    width: 100%
 }
 .max-w-screen-xl {
     max-width: 1280px
 }
 .max-w-sm {
     max-width: 24rem
-}
-.max-w-28 {
-    max-width: 7rem
 }
 .shrink-0 {
     flex-shrink: 0
@@ -172,11 +157,6 @@
 }
 .cursor-pointer {
     cursor: pointer
-}
-.select-none {
-    -webkit-user-select: none;
-       -moz-user-select: none;
-            user-select: none
 }
 .list-decimal {
     list-style-type: decimal
@@ -298,10 +278,6 @@
     padding-top: 2.5rem;
     padding-bottom: 2.5rem
 }
-.py-12 {
-    padding-top: 3rem;
-    padding-bottom: 3rem
-}
 .py-2 {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem
@@ -309,10 +285,6 @@
 .py-4 {
     padding-top: 1rem;
     padding-bottom: 1rem
-}
-.py-20 {
-    padding-top: 5rem;
-    padding-bottom: 5rem
 }
 .pb-28 {
     padding-bottom: 7rem
@@ -354,9 +326,6 @@
 }
 .font-light {
     font-weight: 300
-}
-.font-medium {
-    font-weight: 500
 }
 .uppercase {
     text-transform: uppercase
