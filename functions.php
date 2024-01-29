@@ -299,3 +299,33 @@ function display_sticky_buttons_navigation() {
         echo '</ul>';
     }
 }
+
+/**
+ * Logo with Aria-label information
+ */
+
+function custom_logo_with_aria_label() {
+    $custom_logo_id = get_theme_mod('custom_logo');
+    $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
+
+    if (has_custom_logo()) {
+        // Add aria-label to the custom logo link
+        $custom_logo_output = sprintf(
+            '<a href="%1$s" class="custom-logo-link" rel="home" aria-label="Startseite">%2$s</a>',
+            esc_url(home_url('/')),
+            sprintf(
+                '<img src="%1$s" class="custom-logo" alt="%2$s">',
+                esc_url($logo[0]),
+                get_bloginfo('name', 'display')
+            )
+        );
+
+        echo $custom_logo_output;
+    } else {
+        // Output default site title if there is no custom logo
+        echo '<a href="' . esc_url(home_url('/')) . '" class="font-extrabold text-lg uppercase" aria-label="Startseite">' . get_bloginfo('name') . '</a>';
+    }
+}
+
+// Hook into the get_custom_logo filter
+add_filter('get_custom_logo', 'custom_logo_with_aria_label');

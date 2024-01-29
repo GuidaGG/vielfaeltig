@@ -12,7 +12,7 @@ html {
 }
 .button,
 .wp-element-button {
-  @apply block bg-dark-bg p-0 h-10 w-10 md:w-16 md:h-16 rounded-full shadow-inner;
+  @apply block bg-dark-bg p-0 h-10 w-10 md:w-16 md:h-16 rounded-full shadow-inner hover:shadow-md;
   
   & img {
     @apply w-full h-full;
@@ -23,6 +23,9 @@ html {
   @apply font-medium;
 }
 
+a, summary       {
+  @apply focus:outline-primary      
+}
 .special-shadow {
   box-shadow: var(--shadow);
   clip-path: var(--clip-path);
@@ -181,4 +184,12 @@ footer {
       @apply text-4xl;
     }
   }
+}
+
+
+/* * * * * * SPECIAL * * * * * */
+
+/* Make H1 in homepage look like normal text / Heading necessary for acessility and SEO*/
+.home main h1:first-of-type{
+  @apply text-base
 }

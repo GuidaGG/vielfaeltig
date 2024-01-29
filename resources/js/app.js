@@ -24,13 +24,15 @@ window.addEventListener('load', function () {
       button.classList.add('arrow');
       button.innerHTML = '';
       imgElement.src = `${themeData.templateDirectoryUri}/resources/images/ENT_vielfaeltig_Arrow.svg`;
-      button.setAttribute('href', 'https://queer-lexikon.net/glossar/');
+      imgElement.alt = 'Pfeilsymbol'
+
     }
 
     if (button.innerText.trim().toLowerCase() === 'whatsapp') {
       button.classList.add('whatsapp');
       button.innerHTML = '';
       imgElement.src = `${themeData.templateDirectoryUri}/resources/images/whatsapp.svg`;
+      imgElement.alt = 'Whatsapp Icon'
       imgElement.style.padding = '0.7rem';
       button.setAttribute('href', 'https://wa.me/000');
     }
@@ -54,6 +56,7 @@ window.addEventListener('load', function () {
     arrowContainer.classList.add('shrink-0');
 
     let arrowImage = document.createElement('img');
+    arrowImage.alt = 'Pfeilsymbol';
     arrowImage.className = 'transition-transform duration-200';
     arrowImage.src = `${themeData.templateDirectoryUri}/resources/images/ENT_vielfaeltig_Arrow.svg`;
 
