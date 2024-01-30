@@ -17,7 +17,7 @@ window.addEventListener('load', function () {
   /* --- custom buttons --- */
   const buttons = document.querySelectorAll('.wp-element-button');
 
-  buttons.forEach(function (button) {
+/*   buttons.forEach(function (button) {
     let imgElement = document.createElement('img');
 
     if (button.innerText.trim().toLowerCase() === 'arrow') {
@@ -43,7 +43,7 @@ window.addEventListener('load', function () {
 
     button.setAttribute('target', '_blank');
     button.appendChild(imgElement);
-  });
+  }); */
 
   /* --- drop-down parts --- */
   const details = document.querySelectorAll('.wp-block-details');
@@ -58,7 +58,7 @@ window.addEventListener('load', function () {
     let arrowImage = document.createElement('img');
     arrowImage.alt = 'Pfeilsymbol';
     arrowImage.className = 'transition-transform duration-200';
-    arrowImage.src = `${themeData.templateDirectoryUri}/resources/images/ENT_vielfaeltig_Arrow.svg`;
+    arrowImage.src = `${themeData.templateDirectoryUri}/resources/images/vielfaeltig_Icon_Plus.svg`;
 
     arrowContainer.appendChild(arrowImage);
     summary.appendChild(arrowContainer);

@@ -192,20 +192,42 @@ function my_customizer_footer_section($wp_customize) {
             'section'  => 'partner_section',
             'settings' => 'partner_' . $i,
         )));
+        
+        // Add setting for URL
+           $wp_customize->add_setting('partner_url_' . $i, array(
+            'default'           => '',
+            'sanitize_callback' => 'esc_url_raw',
+        ));
+
+        // Add control for URL
+        $wp_customize->add_control('partner_url_' . $i, array(
+            'label'    => __('URL ' . $i, 'tailpress'),
+            'section'  => 'partner_section',
+            'type'     => 'url', // Specify the control type as URL
+            'settings' => 'partner_url_' . $i,
+        ));
     }
 }
 add_action('customize_register', 'my_customizer_footer_section');
 
-// Display Footer Images in your theme
+// Display Footer Images in your theme as links
 function display_footer_images() {
     echo '<h3>Partner</h3><div class="footer-images">';
 	
     for ($i = 1; $i <= 6; $i++) {
         $image_url = get_theme_mod('partner_' . $i, '');
-        if ($image_url) {
+        $partner_url = get_theme_mod('partner_url_' . $i, '');
+
+        if ($image_url && $partner_url) {
+            echo '<a href="' . esc_url($partner_url) . '" target="_blank">';
+            echo '<img src="' . esc_url($image_url) . '" alt="Partner ' . $i . '">';
+            echo '</a>';
+        }
+        else if($image_url) {
             echo '<img src="' . esc_url($image_url) . '" alt="Partner ' . $i . '">';
         }
     }
+    
     echo '</div>';
 }
 

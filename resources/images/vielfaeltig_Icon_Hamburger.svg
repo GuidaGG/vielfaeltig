@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="RZ_Logo" data-name="RZ Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #ff8c00;
+      }
+
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke-miterlimit: 10;
+        stroke-width: 45px;
+      }
+
+      .cls-2 {
+        stroke: #7869be;
+      }
+
+      .cls-3 {
+        fill: #ff8c00;
+      }
+
+      .cls-3, .cls-4 {
+        stroke-width: 0px;
+      }
+
+      .cls-4 {
+        fill: #7869be;
+      }
+    </style>
+  </defs>
+  <g>
+    <line class="cls-2" x1="94.67" y1="106" x2="304.33" y2="106"/>
+    <path class="cls-4" d="M62.5,90.7v30.6l7.2,7.2h24.97v-45h-24.97l-7.2,7.2Z"/>
+    <path class="cls-4" d="M336.5,90.7v30.6l-7.2,7.2h-24.97v-45h24.97l7.2,7.2Z"/>
+  </g>
+  <g>
+    <line class="cls-1" x1="94.67" y1="200" x2="304.33" y2="200"/>
+    <path class="cls-3" d="M62.5,184.7v30.6l7.2,7.2h24.97v-45h-24.97l-7.2,7.2Z"/>
+    <path class="cls-3" d="M336.5,184.7v30.6l-7.2,7.2h-24.97v-45h24.97l7.2,7.2Z"/>
+  </g>
+  <g>
+    <line class="cls-2" x1="94.67" y1="294" x2="304.33" y2="294"/>
+    <path class="cls-4" d="M62.5,278.7v30.6l7.2,7.2h24.97v-45h-24.97l-7.2,7.2Z"/>
+    <path class="cls-4" d="M336.5,278.7v30.6l-7.2,7.2h-24.97v-45h24.97l7.2,7.2Z"/>
+  </g>
+</svg>

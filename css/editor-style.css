@@ -55,6 +55,12 @@
 .mt-10 {
     margin-top: 2.5rem
 }
+.mb-0 {
+    margin-bottom: 0px
+}
+.mb-2 {
+    margin-bottom: 0.5rem
+}
 .block {
     display: block
 }
@@ -125,7 +131,7 @@
     width: 100%
 }
 .max-w-screen-3xl {
-    max-width: 1600px
+    max-width: 1601px
 }
 .max-w-sm {
     max-width: 24rem
@@ -286,6 +292,14 @@
     padding-top: 1rem;
     padding-bottom: 1rem
 }
+.py-5 {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem
+}
+.py-1 {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem
+}
 .pb-28 {
     padding-bottom: 7rem
 }
@@ -297,6 +311,9 @@
 }
 .pt-20 {
     padding-top: 5rem
+}
+.pt-5 {
+    padding-top: 1.25rem
 }
 .text-2xl {
     font-size: 1.5rem;
@@ -321,6 +338,10 @@
 .text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem
+}
+.text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem
 }
 .font-bold {
     font-weight: 700
@@ -515,6 +536,14 @@ body {
     .md\:py-20 {
         padding-top: 5rem;
         padding-bottom: 5rem
+    }
+    .md\:py-5 {
+        padding-top: 1.25rem;
+        padding-bottom: 1.25rem
+    }
+    .md\:py-10 {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem
     }
     .md\:pl-44 {
         padding-left: 11rem

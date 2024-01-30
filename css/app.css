@@ -543,17 +543,14 @@ video {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
 .mb-8 {
   margin-bottom: 2rem;
 }
-.mt-10 {
-  margin-top: 2.5rem;
-}
 .block {
   display: block;
-}
-.inline-block {
-  display: inline-block;
 }
 .inline {
   display: inline;
@@ -570,9 +567,6 @@ video {
 .h-10 {
   height: 2.5rem;
 }
-.h-12 {
-  height: 3rem;
-}
 .h-16 {
   height: 4rem;
 }
@@ -581,9 +575,6 @@ video {
 }
 .h-28 {
   height: 7rem;
-}
-.h-7 {
-  height: 1.75rem;
 }
 .h-dvh {
   height: 100dvh;
@@ -606,9 +597,6 @@ video {
 .w-40 {
   width: 10rem;
 }
-.w-7 {
-  width: 1.75rem;
-}
 .w-\[80vw\] {
   width: 80vw;
 }
@@ -619,7 +607,7 @@ video {
   width: 100%;
 }
 .max-w-screen-3xl {
-  max-width: 1600px;
+  max-width: 1601px;
 }
 .max-w-sm {
   max-width: 24rem;
@@ -776,9 +764,9 @@ video {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 .pb-28 {
   padding-bottom: 7rem;
@@ -791,6 +779,9 @@ video {
 }
 .pt-20 {
   padding-top: 5rem;
+}
+.pt-5 {
+  padding-top: 1.25rem;
 }
 .text-2xl {
   font-size: 1.5rem;
@@ -816,6 +807,10 @@ video {
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
 .font-bold {
   font-weight: 700;
 }
@@ -830,10 +825,6 @@ video {
 }
 .lowercase {
   text-transform: lowercase;
-}
-.text-black {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 .text-gray-600 {
   --tw-text-opacity: 1;
@@ -970,8 +961,8 @@ html {
 
   .button,
 .wp-element-button {
-    height: 4rem;
-    width: 4rem;
+    height: 3rem;
+    width: 3rem;
   }
 }
 .button img, .wp-element-button img {
@@ -1012,6 +1003,17 @@ header .custom-logo-link img {
 
   header .custom-logo-link img {
     width: 18rem;
+  }
+}
+header .hamburger {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+@media (min-width: 782px) {
+
+  header .hamburger {
+    height: 4rem;
+    width: 4rem;
   }
 }
 /* --------- SIDE BAR --------- */
@@ -1065,7 +1067,7 @@ header .custom-logo-link img {
 }
 .entry-content p a, .entry-content ul a, .entry-content ol a, .block-editor-block-list__layout p a, .block-editor-block-list__layout ul a, .block-editor-block-list__layout ol a {
   --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
+  color: rgb(134 113 216 / var(--tw-text-opacity));
   text-decoration-line: underline;
 }
 .entry-content p a:hover, .entry-content ul a:hover, .entry-content ol a:hover, .block-editor-block-list__layout p a:hover, .block-editor-block-list__layout ul a:hover, .block-editor-block-list__layout ol a:hover {
@@ -1108,8 +1110,8 @@ header .custom-logo-link img {
   border-bottom-width: 2px;
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 .entry-content .wp-block-details summary, .block-editor-block-list__layout .wp-block-details summary {
   display: flex;
@@ -1134,7 +1136,6 @@ footer {
 }
 footer .footer-images {
   display: grid;
-  height: 3rem;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   padding-bottom: 0px;
 }
@@ -1170,6 +1171,10 @@ footer .footer-images img {
   font-size: 1rem;
   line-height: 1.5rem;
 }
+/* reduce spacing between contact paragraph and button */
+.less-margin {
+  margin-bottom: 0.5rem;
+}
 @font-face {
     font-family: 'Round';
     src: url(../fonts/Round_WEB-Book.woff2?7b652277fc3e59f255790a5ef0d3e5e2) format('woff2'),
@@ -1177,6 +1182,7 @@ footer .footer-images img {
     font-weight: normal;
     font-style: normal;
     font-display: swap;
+
 }
 @font-face {
     font-family: 'Round';
@@ -1185,6 +1191,7 @@ footer .footer-images img {
     font-weight: bold;
     font-style: normal;
     font-display: swap;
+
 }
 .hover\:shadow-md:hover {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
@@ -1252,9 +1259,9 @@ footer .footer-images img {
     padding-right: 4rem;
   }
 
-  .md\:py-20 {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+  .md\:py-10 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
   }
 
   .md\:pl-44 {

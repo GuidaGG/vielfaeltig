@@ -38,20 +38,7 @@
 
 					<div class="w-16 h-10 md:w-28 md:h-16 rounded-l-full bg-dark-bg flex items-center justify-left pl-3 md:pl-6 shadow-inner hover:shadow-md">
 						<a href="#" aria-label="Navigation umschalten"  id="primary-menu-toggle">
-							<svg xmlns="http://www.w3.org/2000/svg"
-								class="inline-block w-7 h-7 md:w-12 md:h-12"
-								width="64"
-								height="64"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2"
-								stroke-linecap="round"
-								stroke-linejoin="round">
-								<line x1="3" y1="6" x2="21" y2="6"></line>
-								<line x1="3" y1="12" x2="21" y2="12"></line>
-								<line x1="3" y1="18" x2="21" y2="18"></line>
-							</svg>
+							<img src="<?php echo get_template_directory_uri(); ?>/resources/images/vielfaeltig_Icon_Hamburger.svg" class="hamburger" alt="Menu Icon"/>
 						</a>
 					</div>
 				</div>
@@ -61,7 +48,7 @@
 
 	<div id="sidebar" class="fixed h-dvh top-0 right-0 translate-x-full transition-transform duration-300 ease-in-out w-[80vw] md:w-[500px] text-secondary bg-white px-4 py-10 z-10 special-shadow">
 		<a href="#" aria-label="Toggle navigation" class="button mb-8" id="sidebar-menu-toggle" >
-			<img src="<?php echo get_template_directory_uri(); ?>/resources/images/ENT_vielfaeltig_Arrow.svg" alt="Arrow Icon" >
+			<img src="<?php echo get_template_directory_uri(); ?>/resources/images/vielfaeltig_Icon_Pfeil_rechts.svg" alt="Arrow Icon" >
 		</a>
 		<div role="navigation" aria-label="Seitennavigation">
 		<?php
