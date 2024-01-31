@@ -60,6 +60,7 @@
 					'theme_location'  => 'primary',
 					'li_class'        => '',
 					'fallback_cb'     => false,
+					'walker'          => new Custom_Menu_Walker(),
 				)
 			);
 		?>
