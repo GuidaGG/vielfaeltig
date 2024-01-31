@@ -40,7 +40,7 @@ header {
     @apply relative -left-2 md:-left-4;
   }
   .custom-logo-link img {
-    @apply w-40 md:w-72;
+    @apply w-40 md:w-72 md:w-[16rem]; 
   }
 
   .hamburger {
@@ -104,7 +104,7 @@ header {
 
   h2 {
     /* @apply sticky top-12 */
-    @apply text-3xl pl-28 md:pl-44 font-bold relative mt-6;
+    @apply text-2xl md:text-3xl pl-28 md:pl-[9.5rem] font-bold relative mt-6;
   }
 
   h3 {
@@ -222,10 +222,18 @@ footer {
 
 /* Make H1 in homepage look like normal text / Heading necessary for acessility and SEO*/
 .home main h1:first-of-type{
-  @apply text-base
+  @apply text-base mb-0
 }
 
 /* reduce spacing between contact paragraph and button */ 
 .less-margin{
   @apply mb-2 mt-2 !important
+}
+
+.anchor-padding {
+  @apply scroll-pt-20
+}
+
+.page h2 {
+  @apply sticky top-12 md:top-[3.7rem] z-50;
 }

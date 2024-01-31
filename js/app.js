@@ -73,7 +73,66 @@ window.addEventListener('load', function () {
         arrowImage.classList.remove('rotate-90');
       }
     });
+
+
+  /* --- add containers to H2s--- */
+
+  /*  const content = document.querySelector('.entry-content'); // Replace with the actual ID of your content container
+   const elements = content.children;
+   let currentContainer;
+     for (let i = 0; i < elements.length; i++) {
+         const element = elements[i];
+         if (element.tagName.toLowerCase() === 'h2') {
+        console.log(element)
+           // Close the current container (if exists)
+           if (currentContainer) {
+               content.insertBefore(document.createElement('div'), element);
+               currentContainer = null;
+           }
+             // Open a new container before the h2
+           currentContainer = document.createElement('div');
+           content.insertBefore(currentContainer, element);
+       }
+         // Move the element into the current container
+       if (currentContainer) {
+           currentContainer.appendChild(element);
+       }
+   }
+     // Close the last container (if exists)
+   if (currentContainer) {
+       content.appendChild(document.createElement('div'));
+   } */
+
+  var contentContainer = document.querySelector('.entry-content'); // Replace with the actual class of your content container
+  console.log(contentContainer);
+  var elements = Array.from(contentContainer.children);
+  var currentSection;
+  elements.forEach(function (element, index) {
+    console.log("currentSection", currentSection, index);
+    if (element.tagName.toLowerCase() === 'h2') {
+      // Close the current section (if exists)
+      if (currentSection) {
+        console.log("if there is already");
+        contentContainer.appendChild(currentSection);
+      }
+
+      // Open a new section before the h2
+      console.log("create element");
+      currentSection = document.createElement('div');
+      currentSection.className = "current-section-".concat(index);
+      currentSection.appendChild(element);
+    } else if (currentSection) {
+      console.log("add element");
+      // Move the element into the current section
+      currentSection.appendChild(element);
+    }
   });
+
+  // Close the last section (if exists)
+  /*    if (currentSection) {
+         contentContainer.appendChild(currentSection);
+     } */
+
   var stickyMenu = document.querySelector('#menu-sticky');
   stickyMenu.childNodes.forEach(function (child) {
     var anchor = child.firstChild;
@@ -84,6 +143,7 @@ window.addEventListener('load', function () {
       anchor.innerHTML = text;
     }
   });
+
 });
 
 /***/ }),
