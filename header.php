@@ -46,7 +46,7 @@
 		</div>
 	</header>
 
-	<div id="sidebar" class="fixed h-dvh top-0 right-0 translate-x-full transition-transform duration-300 ease-in-out w-[80vw] md:w-[500px] text-secondary bg-white px-4 py-10 z-10 special-shadow">
+	<div id="sidebar" class="fixed h-dvh top-0 right-0 translate-x-full transition-transform duration-300 ease-in-out w-[80vw] md:w-[500px] text-white px-4 py-10 z-10">
 		<a href="#" aria-label="Toggle navigation" class="button mb-8" id="sidebar-menu-toggle" >
 			<img src="<?php echo get_template_directory_uri(); ?>/resources/images/vielfaeltig_Icon_Pfeil_rechts.svg" alt="Arrow Icon" >
 		</a>

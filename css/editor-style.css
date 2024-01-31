@@ -49,23 +49,17 @@
     margin-top: 2rem;
     margin-bottom: 2rem
 }
-.mb-8 {
-    margin-bottom: 2rem
-}
-.mt-10 {
-    margin-top: 2.5rem
-}
-.mb-0 {
-    margin-bottom: 0px
-}
 .mb-2 {
     margin-bottom: 0.5rem
 }
+.mb-8 {
+    margin-bottom: 2rem
+}
+.mt-2 {
+    margin-top: 0.5rem
+}
 .block {
     display: block
-}
-.inline-block {
-    display: inline-block
 }
 .inline {
     display: inline
@@ -82,9 +76,6 @@
 .h-10 {
     height: 2.5rem
 }
-.h-12 {
-    height: 3rem
-}
 .h-16 {
     height: 4rem
 }
@@ -93,9 +84,6 @@
 }
 .h-28 {
     height: 7rem
-}
-.h-7 {
-    height: 1.75rem
 }
 .h-dvh {
     height: 100dvh
@@ -118,9 +106,6 @@
 .w-40 {
     width: 10rem
 }
-.w-7 {
-    width: 1.75rem
-}
 .w-\[80vw\] {
     width: 80vw
 }
@@ -135,6 +120,9 @@
 }
 .max-w-sm {
     max-width: 24rem
+}
+.flex-shrink {
+    flex-shrink: 1
 }
 .shrink-0 {
     flex-shrink: 0
@@ -163,6 +151,9 @@
 }
 .cursor-pointer {
     cursor: pointer
+}
+.list-inside {
+    list-style-position: inside
 }
 .list-decimal {
     list-style-type: decimal
@@ -229,7 +220,7 @@
 }
 .border-primary {
     --tw-border-opacity: 1;
-    border-color: rgb(134 113 216 / var(--tw-border-opacity))
+    border-color: rgb(120 105 190 / var(--tw-border-opacity))
 }
 .bg-dark-bg {
     --tw-bg-opacity: 1;
@@ -240,16 +231,11 @@
     background-color: rgb(229 231 235 / var(--tw-bg-opacity))
 }
 .bg-light-bg {
-    --tw-bg-opacity: 1;
-    background-color: rgb(248 249 248 / var(--tw-bg-opacity))
+    background-color: #F8F9F8,
 }
 .bg-primary {
     --tw-bg-opacity: 1;
-    background-color: rgb(134 113 216 / var(--tw-bg-opacity))
-}
-.bg-white {
-    --tw-bg-opacity: 1;
-    background-color: rgb(255 255 255 / var(--tw-bg-opacity))
+    background-color: rgb(120 105 190 / var(--tw-bg-opacity))
 }
 .bg-gradient-to-b {
     background-image: linear-gradient(to bottom, var(--tw-gradient-stops))
@@ -288,17 +274,9 @@
     padding-top: 0.5rem;
     padding-bottom: 0.5rem
 }
-.py-4 {
-    padding-top: 1rem;
-    padding-bottom: 1rem
-}
 .py-5 {
     padding-top: 1.25rem;
     padding-bottom: 1.25rem
-}
-.py-1 {
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem
 }
 .pb-28 {
     padding-bottom: 7rem
@@ -314,6 +292,21 @@
 }
 .pt-5 {
     padding-top: 1.25rem
+}
+.-indent-3 {
+    text-indent: -0.75rem
+}
+.-indent-4 {
+    text-indent: -1rem
+}
+.-indent-6 {
+    text-indent: -1.5rem
+}
+.-indent-5 {
+    text-indent: -1.25rem
+}
+.-indent-\[22px\] {
+    text-indent: -22px
 }
 .text-2xl {
     font-size: 1.5rem;
@@ -358,10 +351,6 @@
 .lowercase {
     text-transform: lowercase
 }
-.text-black {
-    --tw-text-opacity: 1;
-    color: rgb(0 0 0 / var(--tw-text-opacity))
-}
 .text-gray-600 {
     --tw-text-opacity: 1;
     color: rgb(75 85 99 / var(--tw-text-opacity))
@@ -372,11 +361,7 @@
 }
 .text-primary {
     --tw-text-opacity: 1;
-    color: rgb(134 113 216 / var(--tw-text-opacity))
-}
-.text-secondary {
-    --tw-text-opacity: 1;
-    color: rgb(248 119 0 / var(--tw-text-opacity))
+    color: rgb(120 105 190 / var(--tw-text-opacity))
 }
 .text-white {
     --tw-text-opacity: 1;
@@ -487,7 +472,7 @@ body {
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
 }
 .focus\:outline-primary:focus {
-    outline-color: #8671D8
+    outline-color: #7869BE
 }
 @media (min-width: 600px) {
     .sm\:grid-cols-2 {
@@ -532,14 +517,6 @@ body {
     .md\:px-16 {
         padding-left: 4rem;
         padding-right: 4rem
-    }
-    .md\:py-20 {
-        padding-top: 5rem;
-        padding-bottom: 5rem
-    }
-    .md\:py-5 {
-        padding-top: 1.25rem;
-        padding-bottom: 1.25rem
     }
     .md\:py-10 {
         padding-top: 2.5rem;
