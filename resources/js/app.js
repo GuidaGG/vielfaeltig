@@ -75,6 +75,15 @@ window.addEventListener('load', function () {
     });
   });
 
-
+  const stickyMenu = document.querySelector('#menu-sticky');
+  stickyMenu.childNodes.forEach(function (child) {
+    let anchor = child.firstChild;
+    if (anchor) {
+      anchor.setAttribute('target', '_blank');
+      let arr = anchor.innerHTML.split('<br>');
+      let text = `<span>${arr[0]}</span><br><span>${arr[1]}</span>`;
+      anchor.innerHTML = text;
+    }
+  });
 
 });

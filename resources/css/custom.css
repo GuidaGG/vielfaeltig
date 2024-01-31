@@ -66,6 +66,28 @@ header {
   @apply translate-x-0
 }
 
+/* --------- STICKY MENU --------- */
+#sticky-menu {
+  @apply fixed bottom-10 md:bottom-16 right-0 z-50 h-auto 3xl:pr-[calc((100vw-1620px)*0.5)];
+
+  ul {
+    @apply flex flex-col gap-4 md:gap-8 place-items-end;
+  }
+
+  li {
+    @apply w-20 h-10 md:w-28 md:h-16 rounded-l-full bg-dark-bg flex items-center pl-4 md:pl-5 shadow-inner hover:shadow-md font-bold text-xs md:text-base;
+  }
+
+  li span:first-child {
+    @apply text-primary;
+  }
+  li span:last-child {
+    @apply text-secondary;
+  }
+  li a {
+    @apply leading-tight text-left
+  }
+}
 
 /* --------- CONTENT --------- */
 .entry-content,

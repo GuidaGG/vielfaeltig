@@ -74,6 +74,16 @@ window.addEventListener('load', function () {
       }
     });
   });
+  var stickyMenu = document.querySelector('#menu-sticky');
+  stickyMenu.childNodes.forEach(function (child) {
+    var anchor = child.firstChild;
+    if (anchor) {
+      anchor.setAttribute('target', '_blank');
+      var arr = anchor.innerHTML.split('<br>');
+      var text = "<span>".concat(arr[0], "</span><br><span>").concat(arr[1], "</span>");
+      anchor.innerHTML = text;
+    }
+  });
 });
 
 /***/ }),

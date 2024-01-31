@@ -16,6 +16,9 @@
 .bottom-0 {
     bottom: 0px
 }
+.bottom-10 {
+    bottom: 2.5rem
+}
 .right-0 {
     right: 0px
 }
@@ -30,6 +33,9 @@
 }
 .z-10 {
     z-index: 10
+}
+.z-50 {
+    z-index: 50
 }
 .m-0 {
     margin: 0px
@@ -49,23 +55,14 @@
     margin-top: 2rem;
     margin-bottom: 2rem
 }
-.mb-8 {
-    margin-bottom: 2rem
-}
-.mt-10 {
-    margin-top: 2.5rem
-}
-.mb-0 {
-    margin-bottom: 0px
-}
 .mb-2 {
     margin-bottom: 0.5rem
 }
+.mb-8 {
+    margin-bottom: 2rem
+}
 .block {
     display: block
-}
-.inline-block {
-    display: inline-block
 }
 .inline {
     display: inline
@@ -82,9 +79,6 @@
 .h-10 {
     height: 2.5rem
 }
-.h-12 {
-    height: 3rem
-}
 .h-16 {
     height: 4rem
 }
@@ -94,8 +88,8 @@
 .h-28 {
     height: 7rem
 }
-.h-7 {
-    height: 1.75rem
+.h-auto {
+    height: auto
 }
 .h-dvh {
     height: 100dvh
@@ -117,9 +111,6 @@
 }
 .w-40 {
     width: 10rem
-}
-.w-7 {
-    width: 1.75rem
 }
 .w-\[80vw\] {
     width: 80vw
@@ -288,17 +279,9 @@
     padding-top: 0.5rem;
     padding-bottom: 0.5rem
 }
-.py-4 {
-    padding-top: 1rem;
-    padding-bottom: 1rem
-}
 .py-5 {
     padding-top: 1.25rem;
     padding-bottom: 1.25rem
-}
-.py-1 {
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem
 }
 .pb-28 {
     padding-bottom: 7rem
@@ -309,11 +292,17 @@
 .pl-3 {
     padding-left: 0.75rem
 }
+.pl-4 {
+    padding-left: 1rem
+}
 .pt-20 {
     padding-top: 5rem
 }
 .pt-5 {
     padding-top: 1.25rem
+}
+.text-left {
+    text-align: left
 }
 .text-2xl {
     font-size: 1.5rem;
@@ -358,9 +347,8 @@
 .lowercase {
     text-transform: lowercase
 }
-.text-black {
-    --tw-text-opacity: 1;
-    color: rgb(0 0 0 / var(--tw-text-opacity))
+.leading-tight {
+    line-height: 1.25
 }
 .text-gray-600 {
     --tw-text-opacity: 1;
@@ -495,6 +483,9 @@ body {
     }
 }
 @media (min-width: 782px) {
+    .md\:bottom-16 {
+        bottom: 4rem
+    }
     .md\:my-6 {
         margin-top: 1.5rem;
         margin-bottom: 1.5rem
@@ -529,17 +520,12 @@ body {
     .md\:grid-cols-6 {
         grid-template-columns: repeat(6, minmax(0, 1fr))
     }
+    .md\:gap-8 {
+        gap: 2rem
+    }
     .md\:px-16 {
         padding-left: 4rem;
         padding-right: 4rem
-    }
-    .md\:py-20 {
-        padding-top: 5rem;
-        padding-bottom: 5rem
-    }
-    .md\:py-5 {
-        padding-top: 1.25rem;
-        padding-bottom: 1.25rem
     }
     .md\:py-10 {
         padding-top: 2.5rem;
@@ -547,6 +533,9 @@ body {
     }
     .md\:pl-44 {
         padding-left: 11rem
+    }
+    .md\:pl-5 {
+        padding-left: 1.25rem
     }
     .md\:pl-6 {
         padding-left: 1.5rem
@@ -562,6 +551,11 @@ body {
 @media (min-width: 960px) {
     .lg\:grid-cols-3 {
         grid-template-columns: repeat(3, minmax(0, 1fr))
+    }
+}
+@media (min-width: 1601px) {
+    .\33xl\:pr-\[calc\(\(100vw-1620px\)\*0\.5\)\] {
+        padding-right: calc((100vw - 1620px) * 0.5)
     }
 }
 
