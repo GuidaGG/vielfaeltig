@@ -1,3 +1,47 @@
+.container {
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem
+}
+@media (min-width: 480px) {
+    .container {
+        max-width: 480px
+    }
+}
+@media (min-width: 600px) {
+    .container {
+        max-width: 600px;
+        padding-right: 2rem;
+        padding-left: 2rem
+    }
+}
+@media (min-width: 782px) {
+    .container {
+        max-width: 782px
+    }
+}
+@media (min-width: 960px) {
+    .container {
+        max-width: 960px;
+        padding-right: 0rem;
+        padding-left: 0rem
+    }
+}
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1280px
+    }
+}
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1440px
+    }
+}
+@media (min-width: 1601px) {
+    .container {
+        max-width: 1601px
+    }
+}
 .fixed {
     position: fixed
 }
@@ -24,6 +68,60 @@
 }
 .top-12 {
     top: 3rem
+}
+.top-10 {
+    top: 2.5rem
+}
+.top-20 {
+    top: 5rem
+}
+.top-16 {
+    top: 4rem
+}
+.top-14 {
+    top: 3.5rem
+}
+.top-\[60px\] {
+    top: 60px
+}
+.top-60 {
+    top: 15rem
+}
+.top-\[22px\] {
+    top: 22px
+}
+.top-32 {
+    top: 8rem
+}
+.top-\[3\.5rem\] {
+    top: 3.5rem
+}
+.top-\[3rem\] {
+    top: 3rem
+}
+.top-\[4rem\] {
+    top: 4rem
+}
+.top-\[3\.8rem\] {
+    top: 3.8rem
+}
+.top-\[3\.7rem\] {
+    top: 3.7rem
+}
+.top-1 {
+    top: 0.25rem
+}
+.top-4 {
+    top: 1rem
+}
+.top-5 {
+    top: 1.25rem
+}
+.top-8 {
+    top: 2rem
+}
+.top-9 {
+    top: 2.25rem
 }
 .z-0 {
     z-index: 0
@@ -57,6 +155,9 @@
 }
 .mt-2 {
     margin-top: 0.5rem
+}
+.mb-0 {
+    margin-bottom: 0px
 }
 .block {
     display: block
@@ -152,6 +253,9 @@
 .cursor-pointer {
     cursor: pointer
 }
+.scroll-pt-20 {
+    scroll-padding-top: 5rem
+}
 .list-inside {
     list-style-position: inside
 }
@@ -236,6 +340,10 @@
 .bg-primary {
     --tw-bg-opacity: 1;
     background-color: rgb(120 105 190 / var(--tw-bg-opacity))
+}
+.bg-purple-400 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(192 132 252 / var(--tw-bg-opacity))
 }
 .bg-gradient-to-b {
     background-image: linear-gradient(to bottom, var(--tw-gradient-stops))
@@ -335,6 +443,9 @@
 .text-xs {
     font-size: 0.75rem;
     line-height: 1rem
+}
+.text-xl {
+    font-size: 1.25rem
 }
 .font-bold {
     font-weight: 700
@@ -480,6 +591,9 @@ body {
     }
 }
 @media (min-width: 782px) {
+    .md\:top-\[3\.7rem\] {
+        top: 3.7rem
+    }
     .md\:my-6 {
         margin-top: 1.5rem;
         margin-bottom: 1.5rem
@@ -511,6 +625,15 @@ body {
     .md\:w-\[500px\] {
         width: 500px
     }
+    .md\:w-72 {
+        width: 18rem
+    }
+    .md\:w-\[266px\] {
+        width: 266px
+    }
+    .md\:w-\[16rem\] {
+        width: 16rem
+    }
     .md\:grid-cols-6 {
         grid-template-columns: repeat(6, minmax(0, 1fr))
     }
@@ -530,6 +653,24 @@ body {
     }
     .md\:pt-32 {
         padding-top: 8rem
+    }
+    .md\:pl-40 {
+        padding-left: 10rem
+    }
+    .md\:pl-36 {
+        padding-left: 9rem
+    }
+    .md\:pl-\[10rem\] {
+        padding-left: 10rem
+    }
+    .md\:pl-\[9rem\] {
+        padding-left: 9rem
+    }
+    .md\:pl-\[9-5rem\] {
+        padding-left: 9-5rem
+    }
+    .md\:pl-\[9\.5rem\] {
+        padding-left: 9.5rem
     }
     .md\:text-3xl {
         font-size: 1.875rem;
