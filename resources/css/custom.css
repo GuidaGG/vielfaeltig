@@ -9,6 +9,7 @@
 html {
   font-size: var(--font-lg);
   line-height: 1.2;
+  font-feature-settings: "ss16" 1, "ss17" 1
 }
 .button,
 .wp-element-button {
@@ -51,6 +52,7 @@ header {
 /* --------- SIDE BAR --------- */
 
 #sidebar {
+  background-color: rgba(255, 140, 0, 0.9);
 
   #primary-menu,
   #secondary-menu {
@@ -109,9 +111,12 @@ header {
     @apply text-lg;
   }
 
+  h1, h2, h3 {
+    @apply mb-6;
+  }
 
-  p, ul, ol {
-    @apply m-0 mb-8;
+  p, ul, ol, blockquote {
+    @apply m-0 mb-4;
     
     a {
       @apply text-primary underline;
@@ -124,13 +129,13 @@ header {
 
   ul:not(.block-editor-block-variation-picker__variations) {
     li {
-      @apply list-disc list-inside;
+      @apply list-disc list-inside -indent-5 pl-6;
     }
   }
 
   ol {
     li {
-      @apply list-decimal list-inside;
+      @apply list-decimal list-inside -indent-5 pl-6;
     }
   }
 
@@ -163,7 +168,7 @@ header {
     @apply border-y-2 border-gray-300 py-2 ;
 
     & summary {
-      @apply list-none flex justify-between items-center flex-shrink;
+      @apply list-none flex justify-between items-center flex-shrink  break-all;
     }
 
     & p {
@@ -222,5 +227,5 @@ footer {
 
 /* reduce spacing between contact paragraph and button */ 
 .less-margin{
-  @apply mb-2
+  @apply mb-2 mt-2 !important
 }
