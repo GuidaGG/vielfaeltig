@@ -10,12 +10,12 @@
         {
           "name": "Primary",
           "slug": "primary",
-          "color": "#8671D8"
+          "color": "#7869BE"
         },
         {
           "name": "Secondary",
           "slug": "secondary",
-          "color": "#F87700"
+          "color": "#FF8C00"
         },
         {
           "name": "Dark Background",
@@ -25,7 +25,7 @@
         {
           "name": "Light Background",
           "slug": "light-bg",
-          "color": "#F8F9F8"
+          "color": "#F8F9F8,"
         }
       ]
     },

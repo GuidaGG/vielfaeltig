@@ -10,7 +10,6 @@
         url('./../fonts/Round_WEB-Book.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
 
 }
 
@@ -20,6 +19,4 @@
         url('./../fonts/Round_WEB-Medium.woff') format('woff');
     font-weight: bold;
     font-style: normal;
-    font-display: swap;
-
 }
