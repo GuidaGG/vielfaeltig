@@ -21,28 +21,34 @@ window.addEventListener('load', function () {
 
   /* --- custom buttons --- */
   var buttons = document.querySelectorAll('.wp-element-button');
-  buttons.forEach(function (button) {
-    var imgElement = document.createElement('img');
-    if (button.innerText.trim().toLowerCase() === 'arrow') {
-      button.classList.add('arrow');
-      button.innerHTML = '';
-      imgElement.src = "".concat(themeData.templateDirectoryUri, "/resources/images/ENT_vielfaeltig_Arrow.svg");
-      imgElement.alt = 'Pfeilsymbol';
-    }
-    if (button.innerText.trim().toLowerCase() === 'whatsapp') {
-      button.classList.add('whatsapp');
-      button.innerHTML = '';
-      imgElement.src = "".concat(themeData.templateDirectoryUri, "/resources/images/whatsapp.svg");
-      imgElement.alt = 'Whatsapp Icon';
-      imgElement.style.padding = '0.7rem';
-      button.setAttribute('href', 'https://wa.me/000');
-    }
-    if (button.innerText.trim().toLowerCase() === 'instagram') {
-      button.classList.add('instagram');
-    }
-    button.setAttribute('target', '_blank');
-    button.appendChild(imgElement);
-  });
+
+  /*   buttons.forEach(function (button) {
+      let imgElement = document.createElement('img');
+  
+      if (button.innerText.trim().toLowerCase() === 'arrow') {
+        button.classList.add('arrow');
+        button.innerHTML = '';
+        imgElement.src = `${themeData.templateDirectoryUri}/resources/images/ENT_vielfaeltig_Arrow.svg`;
+        imgElement.alt = 'Pfeilsymbol'
+  
+      }
+  
+      if (button.innerText.trim().toLowerCase() === 'whatsapp') {
+        button.classList.add('whatsapp');
+        button.innerHTML = '';
+        imgElement.src = `${themeData.templateDirectoryUri}/resources/images/whatsapp.svg`;
+        imgElement.alt = 'Whatsapp Icon'
+        imgElement.style.padding = '0.7rem';
+        button.setAttribute('href', 'https://wa.me/000');
+      }
+  
+      if (button.innerText.trim().toLowerCase() === 'instagram') {
+        button.classList.add('instagram');
+      }
+  
+      button.setAttribute('target', '_blank');
+      button.appendChild(imgElement);
+    }); */
 
   /* --- drop-down parts --- */
   var details = document.querySelectorAll('.wp-block-details');
@@ -54,7 +60,7 @@ window.addEventListener('load', function () {
     var arrowImage = document.createElement('img');
     arrowImage.alt = 'Pfeilsymbol';
     arrowImage.className = 'transition-transform duration-200';
-    arrowImage.src = "".concat(themeData.templateDirectoryUri, "/resources/images/ENT_vielfaeltig_Arrow.svg");
+    arrowImage.src = "".concat(themeData.templateDirectoryUri, "/resources/images/vielfaeltig_Icon_Plus.svg");
     arrowContainer.appendChild(arrowImage);
     summary.appendChild(arrowContainer);
     summary.addEventListener('click', function (e) {

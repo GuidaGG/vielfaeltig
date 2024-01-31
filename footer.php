@@ -17,9 +17,9 @@
 
 <?php do_action( 'tailpress_content_after' ); ?>
 
-<footer id="colophon" class="site-footer  text-white" role="contentinfo">
+<footer id="colophon" class="site-footer  text-white text-xs" role="contentinfo">
 	<?php do_action( 'tailpress_footer' ); ?>
-	<div class="footer-shadow max-w-screen-3xl mx-auto px-6 md:px-16 bg-primary py-10 md:py-20 special-shadow">
+	<div class="footer-shadow max-w-screen-3xl mx-auto px-6 md:px-16 bg-primary py-5 md:py-10 special-shadow">
 		<div class=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 ">
 			<div>
 				<?php display_contact_info() ?>
@@ -54,7 +54,7 @@
 			</div>
 		</div>
 
-		<div class="mt-10">
+		<div class="pt-5">
 			<?php display_footer_images() ?>
 		</div>
 	</div>			

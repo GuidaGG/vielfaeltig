@@ -12,7 +12,7 @@ html {
 }
 .button,
 .wp-element-button {
-  @apply block bg-dark-bg p-0 h-10 w-10 md:w-16 md:h-16 rounded-full shadow-inner hover:shadow-md;
+  @apply block bg-dark-bg p-0 h-10 w-10 md:w-12 md:h-12 rounded-full shadow-inner hover:shadow-md;
   
   & img {
     @apply w-full h-full;
@@ -40,6 +40,10 @@ header {
   }
   .custom-logo-link img {
     @apply w-40 md:w-72;
+  }
+
+  .hamburger {
+    @apply h-10 w-10  md:w-16 md:h-16 
   }
 
 }
@@ -88,7 +92,7 @@ header {
     @apply m-0 mb-8;
     
     a {
-      @apply text-black underline;
+      @apply text-primary underline;
 
       &:hover {
         @apply no-underline;
@@ -134,7 +138,7 @@ header {
   } */
 
   .wp-block-details {
-    @apply border-y-2 border-gray-300 py-4 ;
+    @apply border-y-2 border-gray-300 py-2 ;
 
     & summary {
       @apply list-none flex justify-between items-center flex-shrink;
@@ -151,7 +155,7 @@ header {
 /* --------- FOOTER --------- */
 footer {
   .footer-images {
-    @apply h-12 grid grid-cols-2 md:grid-cols-6 pb-0;
+    @apply grid grid-cols-2 md:grid-cols-6 pb-0;
 
     img { 
       @apply w-auto max-h-20;
@@ -192,4 +196,9 @@ footer {
 /* Make H1 in homepage look like normal text / Heading necessary for acessility and SEO*/
 .home main h1:first-of-type{
   @apply text-base
+}
+
+/* reduce spacing between contact paragraph and button */ 
+.less-margin{
+  @apply mb-2
 }

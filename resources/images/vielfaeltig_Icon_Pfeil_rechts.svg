@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="RZ_Logo" data-name="RZ Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #ff8c00;
+      }
+
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke-miterlimit: 10;
+        stroke-width: 45px;
+      }
+
+      .cls-3 {
+        fill: #ff8c00;
+      }
+
+      .cls-3, .cls-4 {
+        stroke-width: 0px;
+      }
+
+      .cls-4 {
+        fill: #7869be;
+      }
+
+      .cls-2 {
+        stroke: #7869be;
+        stroke-linecap: square;
+      }
+    </style>
+  </defs>
+  <g>
+    <polyline class="cls-2" points="218.16 289.32 307 200 218.16 110.68"/>
+    <path class="cls-4" d="M184.62,301.34l21.69,21.58,10.19-.03,17.61-17.7-31.91-31.73-17.61,17.7.03,10.18Z"/>
+    <path class="cls-4" d="M184.62,98.66l21.69-21.58,10.19.03,17.61,17.7-31.91,31.73-17.61-17.7.03-10.18Z"/>
+  </g>
+  <g>
+    <line class="cls-1" x1="95.17" y1="200" x2="206.83" y2="200"/>
+    <path class="cls-3" d="M63,184.7v30.6l7.2,7.2h24.97v-45h-24.97l-7.2,7.2Z"/>
+    <path class="cls-3" d="M239,184.7v30.6l-7.2,7.2h-24.97v-45h24.97l7.2,7.2Z"/>
+  </g>
+</svg>
