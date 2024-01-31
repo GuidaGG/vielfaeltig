@@ -75,6 +75,7 @@ window.addEventListener('load', function () {
     });
   });
 
+
    /* --- add containers to H2s--- */
    
   /*  const content = document.querySelector('.entry-content'); // Replace with the actual ID of your content container
@@ -141,3 +142,17 @@ window.addEventListener('load', function () {
    } */
 
 });
+
+  const stickyMenu = document.querySelector('#menu-sticky');
+  stickyMenu.childNodes.forEach(function (child) {
+    let anchor = child.firstChild;
+    if (anchor) {
+      anchor.setAttribute('target', '_blank');
+      let arr = anchor.innerHTML.split('<br>');
+      let text = `<span>${arr[0]}</span><br><span>${arr[1]}</span>`;
+      anchor.innerHTML = text;
+    }
+  });
+
+});
+

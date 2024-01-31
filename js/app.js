@@ -73,7 +73,7 @@ window.addEventListener('load', function () {
         arrowImage.classList.remove('rotate-90');
       }
     });
-  });
+
 
   /* --- add containers to H2s--- */
 
@@ -132,6 +132,18 @@ window.addEventListener('load', function () {
   /*    if (currentSection) {
          contentContainer.appendChild(currentSection);
      } */
+
+  var stickyMenu = document.querySelector('#menu-sticky');
+  stickyMenu.childNodes.forEach(function (child) {
+    var anchor = child.firstChild;
+    if (anchor) {
+      anchor.setAttribute('target', '_blank');
+      var arr = anchor.innerHTML.split('<br>');
+      var text = "<span>".concat(arr[0], "</span><br><span>").concat(arr[1], "</span>");
+      anchor.innerHTML = text;
+    }
+  });
+
 });
 
 /***/ }),
