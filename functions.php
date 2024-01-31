@@ -351,3 +351,18 @@ function custom_logo_with_aria_label() {
 
 // Hook into the get_custom_logo filter
 add_filter('get_custom_logo', 'custom_logo_with_aria_label');
+
+// Custom Walker class for changing primary menu links
+class Custom_Menu_Walker extends Walker_Nav_Menu {
+    function start_el( &$output, $item, $depth = 0, $args = null, $id = 0 ) {
+        // Check if on homepage
+        $is_homepage = is_home() || is_front_page();
+
+        // Modify the link based on the current page
+        if ( $is_homepage ) {
+            $output .= '<li id="menu-item-'. $item->ID . '" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-' . $item->ID . '"><a href="#' . $item->post_name . '">' . $item->title . '</a>';
+        } else {
+            $output .= '<li id="menu-item-'. $item->ID . '" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-' . $item->ID . '"><a href="' . esc_url( home_url( '/' ) ) . '#' . $item->post_name . '">' . $item->title . '</a>';
+        }
+    }
+}
