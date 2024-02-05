@@ -77,73 +77,41 @@ window.addEventListener('load', function () {
 
 
    /* --- add containers to H2s--- */
-   
-  /*  const content = document.querySelector('.entry-content'); // Replace with the actual ID of your content container
-   const elements = content.children;
-   let currentContainer;
-
-   for (let i = 0; i < elements.length; i++) {
-
-       const element = elements[i];
-
-       if (element.tagName.toLowerCase() === 'h2') {
-        console.log(element)
-           // Close the current container (if exists)
-           if (currentContainer) {
-               content.insertBefore(document.createElement('div'), element);
-               currentContainer = null;
-           }
-
-           // Open a new container before the h2
-           currentContainer = document.createElement('div');
-           content.insertBefore(currentContainer, element);
-       }
-
-       // Move the element into the current container
-       if (currentContainer) {
-           currentContainer.appendChild(element);
-       }
-   }
-
-   // Close the last container (if exists)
-   if (currentContainer) {
-       content.appendChild(document.createElement('div'));
-   } */
-
-   const contentContainer = document.querySelector('.entry-content'); // Replace with the actual class of your content container
+   const contentContainer = document.querySelector('.home .entry-content'); // Replace with the actual class of your content container
    console.log(contentContainer)
-   const elements = Array.from(contentContainer.children);
-   let currentSection;
+   if(contentContainer){
+      const elements = Array.from(contentContainer.children);
+      let currentSection;
 
-   elements.forEach((element, index) => {
-    console.log("currentSection", currentSection, index)
-       if (element.tagName.toLowerCase() === 'h2') {
-           // Close the current section (if exists)
-           if (currentSection) {
-            console.log("if there is already")
-               contentContainer.appendChild(currentSection);
-           }
+      elements.forEach((element, index) => {
+        console.log("currentSection", currentSection, index)
+          if (element.tagName.toLowerCase() === 'h2') {
+              // Close the current section (if exists)
+              if (currentSection) {
+                console.log("if there is already")
+                  contentContainer.appendChild(currentSection);
+              }
 
-           // Open a new section before the h2
-           console.log("create element")
-           currentSection = document.createElement('div');
-           currentSection.className = `current-section-${index}`
-           currentSection.appendChild(element);
-       } else if (currentSection) {
-         console.log("add element")
-           // Move the element into the current section
-           currentSection.appendChild(element);
-       }
-   });
+              // Open a new section before the h2
+              console.log("create element")
+              currentSection = document.createElement('div');
+              currentSection.className = `current-section-${index}`
+              currentSection.appendChild(element);
+          } else if (currentSection) {
+            console.log("add element")
+              // Move the element into the current section
+              currentSection.appendChild(element);
+          }
+      });
 
-   // Close the last section (if exists)
-/*    if (currentSection) {
-       contentContainer.appendChild(currentSection);
-   } */
 
-});
+      // Close the last section (if exists)
+      if (currentSection) {
+          contentContainer.appendChild(currentSection);
+      } 
+    } 
 
-  const stickyMenu = document.querySelector('#menu-sticky');
+  const stickyMenu = document.querySelector('#sticky-menu ul');
   stickyMenu.childNodes.forEach(function (child) {
     let anchor = child.firstChild;
     if (anchor) {

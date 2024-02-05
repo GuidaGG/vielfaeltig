@@ -9,7 +9,7 @@
 	<?php else : ?>
 
 		<!-- fago CONTENT CONTAINER 03 (content.php) mb-12? -->
-		<div class="entry-content max-w-screen-3xl mx-auto pt-20 pb-28 md:pt-32 px-6 md:px-16">
+		<div class="entry-content max-w-screen-3xl mx-auto pt-20 pb-28 md:pt-32 px-6 md:px-20 xl:px-32">
 			<?php
 			/* translators: %s: Name of current post */
 			the_content(

@@ -25,7 +25,12 @@
         {
           "name": "Light Background",
           "slug": "light-bg",
-          "color": "#F8F9F8,"
+          "color": "#F8F9F8"
+        },
+        {
+          "name": "Lighter Background",
+          "slug": "lighter-bg",
+          "color": "#F2F2F2"
         }
       ]
     },

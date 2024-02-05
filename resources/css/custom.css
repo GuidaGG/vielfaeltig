@@ -6,18 +6,29 @@
   --clip-path: inset(0px -30px 0px -30px);
 }
 
+
+
 html {
   font-size: var(--font-lg);
-  line-height: 1.2;
-  font-feature-settings: "ss16" 1, "ss17" 1
+  font-feature-settings: "ss16" 1, "ss17" 1;
+  @apply leading-[1.3rem];
+
 }
 .button,
 .wp-element-button {
-  @apply block bg-dark-bg p-0 h-10 w-10 md:w-12 md:h-12 rounded-full shadow-inner hover:shadow-md;
+  @apply block bg-lighter-bg p-0 h-10 w-10 md:w-12 md:h-12 rounded-full shadow-inner-special hover:shadow-md;
   
   & img {
     @apply w-full h-full;
   }
+}
+
+details .wp-element-button {
+  @apply bg-light-bg shadow-none hover:shadow-none 
+}
+
+summary { 
+  @apply hover:font-bold
 }
 
 .menu {
@@ -32,19 +43,22 @@ a, summary       {
   clip-path: var(--clip-path);
 }
 
+.shadow-inner-special {
+  box-shadow: inset 0 6px 6px 0 rgb(0 0 0 / 0.2);
+}
 /* --------- HEADER --------- */
 header {
   @apply select-none;
   
   .custom-logo-link {
-    @apply relative -left-2 md:-left-4;
+    @apply relative left-2 md:left-1 xl:left-14;
   }
   .custom-logo-link img {
     @apply w-40 md:w-72 md:w-[16rem]; 
   }
 
   .hamburger {
-    @apply h-10 w-10  md:w-16 md:h-16 
+    @apply h-10 w-10 md:w-12 md:h-12
   }
 
 }
@@ -77,7 +91,7 @@ header {
   }
 
   li {
-    @apply w-20 h-10 md:w-28 md:h-16 rounded-l-full bg-dark-bg flex items-center pl-4 md:pl-5 shadow-inner hover:shadow-md font-bold text-xs md:text-base;
+    @apply w-20 h-10 md:w-28 md:h-16 rounded-l-full bg-lighter-bg flex items-center pl-4 md:pl-5 shadow-inner-special hover:shadow-md font-bold text-xs md:text-base box-content;
   }
 
   li span:first-child {
@@ -87,7 +101,7 @@ header {
     @apply text-secondary;
   }
   li a {
-    @apply leading-tight text-left
+    @apply text-left leading-4
   }
 }
 
@@ -104,11 +118,11 @@ header {
 
   h2 {
     /* @apply sticky top-12 */
-    @apply text-2xl md:text-3xl pl-28 md:pl-[9.5rem] font-bold relative mt-6;
+    @apply text-2xl md:text-3xl pl-32 md:pl-[9.7rem] xl:pl-40 font-bold relative mt-6;
   }
 
   h3 {
-    @apply text-lg;
+    @apply text-lg break-all;
   }
 
   h1, h2, h3 {
@@ -119,7 +133,7 @@ header {
     @apply m-0 mb-4;
     
     a {
-      @apply text-primary underline;
+      @apply text-primary underline break-all;
 
       &:hover {
         @apply no-underline;
@@ -129,21 +143,21 @@ header {
 
   ul:not(.block-editor-block-variation-picker__variations) {
     li {
-      @apply list-disc list-inside -indent-5 pl-6;
+      @apply list-disc list-inside -indent-5 pl-6 pb-2 ;
     }
   }
 
   ol {
     li {
-      @apply list-decimal list-inside -indent-5 pl-6;
+      @apply list-decimal list-inside -indent-5 pl-6 pb-2 ;
     }
   }
-
+  
   .wp-block-quote {
-    @apply border-none pl-0;
+    @apply border-none pl-0 text-lg md:text-4xl;
     
     p {
-      @apply inline font-bold ;
+      @apply inline font-bold leading-3 ;
     }
 
     cite {
@@ -165,7 +179,7 @@ header {
   } */
 
   .wp-block-details {
-    @apply border-y-2 border-gray-300 py-2 ;
+    @apply border-y-2 border-gray-300 py-1 ;
 
     & summary {
       @apply list-none flex justify-between items-center flex-shrink  break-all;
@@ -187,8 +201,12 @@ footer {
     img { 
       @apply w-auto max-h-20;
     }
+  
   }
 
+  a {
+    @apply font-bold tracking-wide pb-4;
+  }
   /* .contact-info {
     background-color: aqua
   } */
@@ -197,10 +215,29 @@ footer {
   } */
 }
 
+/* * * * * * MEDIUM SCREENS * * * * * */
+@screen md {
+  :root {
+    --font-lg: 1.4rem;
+    --font-sm: 1.2rem;
+  }
+  .entry-content,
+  .block-editor-block-list__layout {
+    h1 {
+      @apply text-5xl;
+    }
+
+    h2 {
+      @apply text-4xl;
+    }
+  }
+}
+
+
 
 
 /* * * * * * LARGER SCREENS * * * * * */
-@screen md {
+@screen xl {
   :root {
     --font-lg: 1.8rem;
     --font-sm: 1.2rem;
@@ -236,4 +273,18 @@ footer {
 
 .page h2 {
   @apply sticky top-12 md:top-[3.7rem] z-50;
+}
+
+input, textarea {
+  width: 100% !important;
+}
+
+form {
+  @apply text-sm;
+  .wpcf7-submit {
+    @apply button max-w-40 font-bold cursor-pointer;
+  }
+  .wpcf7-list-item {
+    @apply m-0;
+  }
 }

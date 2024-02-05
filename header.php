@@ -9,18 +9,18 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class( 'bg-light-bg text-primary antialiased scroll-smooth' ); ?>>
+<body <?php body_class( 'bg-light-bg text-primary antialiased scroll-smooth overflow-x-hidden' ); ?>>
 
 <?php do_action( 'tailpress_site_before' ); ?>
 
-<div id="page" class="flex flex-col scroll-smooth">
+<div id="page" class="flex flex-col scroll-smooth overflow-x-hidden">
 
 	<?php do_action( 'tailpress_header' ); ?>
 
 	<header class="fixed w-full z-10 bg-gradient-to-b ">
 		<div class="">
 			<div class="">
-				<div class="inner-container h-16 md:h-32 max-w-screen-3xl mx-auto flex justify-between items-center max-w-">
+				<div class="inner-container h-16 md:h-32 max-w-screen-3xl mx-auto flex justify-between items-center">
 					<div>
 						<?php if ( has_custom_logo() ) { ?>
               			<?php custom_logo_with_aria_label(); ?>
@@ -36,7 +36,7 @@
 						<?php } ?>
 					</div>
 
-					<div class="w-16 h-10 md:w-28 md:h-16 rounded-l-full bg-dark-bg flex items-center justify-left pl-3 md:pl-6 shadow-inner hover:shadow-md">
+					<div class="w-16 h-10 md:w-28 md:h-16 mt-20 md:mt-0 rounded-l-full bg-lighter-bg flex items-center justify-left pl-3 md:pl-4 shadow-inner-special hover:shadow-md">
 						<a href="#" aria-label="Navigation umschalten"  id="primary-menu-toggle">
 							<img src="<?php echo get_template_directory_uri(); ?>/resources/images/vielfaeltig_Icon_Hamburger.svg" class="hamburger" alt="Menu Icon"/>
 						</a>
@@ -46,7 +46,7 @@
 		</div>
 	</header>
 
-	<div id="sidebar" class="fixed h-dvh top-0 right-0 translate-x-full transition-transform duration-300 ease-in-out w-[80vw] md:w-[500px] text-white px-4 py-10 z-10">
+	<div id="sidebar" class="fixed h-dvh top-0 right-0 translate-x-full transition-transform duration-300 ease-in-out w-[80vw] md:w-[500px] text-white px-4  py-10 z-10">
 		<a href="#" aria-label="Toggle navigation" class="button mb-8" id="sidebar-menu-toggle" >
 			<img src="<?php echo get_template_directory_uri(); ?>/resources/images/vielfaeltig_Icon_Pfeil_rechts.svg" alt="Arrow Icon" >
 		</a>
