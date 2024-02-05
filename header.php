@@ -13,7 +13,7 @@
 
 <?php do_action( 'tailpress_site_before' ); ?>
 
-<div id="page" class="flex flex-col scroll-smooth overflow-x-hidden">
+<div id="page" class="flex flex-col scroll-smooth ">
 
 	<?php do_action( 'tailpress_header' ); ?>
 
@@ -79,9 +79,7 @@
 		?>
 		</div>
 	</div>
-	<!-- fago CONTENT CONTAINER 01 (header.php) -->
-	<div id="content" class="flex-grow relative z-0">
-		<div role="navigation">
+	<div role="navigation">
 		<?php
 			wp_nav_menu(
 				array(
@@ -95,6 +93,9 @@
 			);
 		?>
 		</div>
+	<!-- fago CONTENT CONTAINER 01 (header.php) -->
+	<div id="content" class="flex-grow relative z-0">
+
 		<?php if ( is_front_page() ) { ?>
 		
 		<?php } ?>

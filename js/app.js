@@ -83,7 +83,7 @@ window.addEventListener('load', function () {
     var currentSection;
     elements.forEach(function (element, index) {
       console.log("currentSection", currentSection, index);
-      if (element.tagName.toLowerCase() === 'h2') {
+      if (element.classList.contains("stick")) {
         // Close the current section (if exists)
         if (currentSection) {
           console.log("if there is already");

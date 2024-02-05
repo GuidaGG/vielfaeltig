@@ -118,7 +118,7 @@ header {
 
   h2 {
     /* @apply sticky top-12 */
-    @apply text-2xl md:text-3xl pl-32 md:pl-[9.7rem] xl:pl-40 font-bold relative mt-6;
+    @apply text-2xl md:text-3xl  font-bold relative mt-6;
   }
 
   h3 {
@@ -271,8 +271,8 @@ footer {
   @apply scroll-pt-20
 }
 
-.page h2 {
-  @apply sticky top-12 md:top-[3.7rem] z-50;
+.page .stick {
+  @apply  sticky top-12 md:top-[3.7rem] z-50 pl-32 md:pl-[9.7rem] xl:pl-40 text-2xl md:text-3xl xl:text-4xl;
 }
 
 input, textarea {

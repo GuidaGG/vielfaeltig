@@ -1258,7 +1258,6 @@ header .hamburger {
     /* @apply sticky top-12 */
     position: relative;
     margin-top: 1.5rem;
-    padding-left: 8rem;
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 700;
@@ -1266,15 +1265,8 @@ header .hamburger {
 @media (min-width: 782px) {
 
   .entry-content h2, .block-editor-block-list__layout h2 {
-    padding-left: 9.7rem;
     font-size: 1.875rem;
     line-height: 2.25rem;
-  }
-}
-@media (min-width: 1280px) {
-
-  .entry-content h2, .block-editor-block-list__layout h2 {
-    padding-left: 10rem;
   }
 }
 .entry-content h3, .block-editor-block-list__layout h3 {
@@ -1442,15 +1434,29 @@ footer a {
 .anchor-padding {
   scroll-padding-top: 5rem;
 }
-.page h2 {
+.page .stick {
   position: sticky;
   top: 3rem;
   z-index: 50;
+  padding-left: 8rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 @media (min-width: 782px) {
 
-  .page h2 {
+  .page .stick {
     top: 3.7rem;
+    padding-left: 9.7rem;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+@media (min-width: 1280px) {
+
+  .page .stick {
+    padding-left: 10rem;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 }
 input, textarea {
