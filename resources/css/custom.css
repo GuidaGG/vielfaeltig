@@ -51,7 +51,7 @@ header {
   @apply select-none ;
   
   .logo {
-    @apply relative left-5 md:left-[4.5rem] xl:left-[5.5rem] text-black;
+    @apply relative left-5 md:left-[4.5rem] xl:left-[5.4rem] text-black;
   }
 
   h1 {
@@ -310,9 +310,13 @@ form {
 
 /* special classes for stick elements */
 .page .stick {
-  @apply  sticky top-[1rem] md:top-[2.7rem] z-50 pl-8 md:pl-[8.4rem] xl:pl-[10.2rem] text-2xl md:text-3xl xl:text-4xl;
+  @apply  sticky top-[1rem] md:top-[2.8rem] z-50 pl-36 md:pl-[8.4rem] xl:pl-[10.2rem] text-2xl md:text-3xl xl:text-4xl;
 }
 
 .page h1.stick {
-  @apply  fixed top-[1rem] md:top-[2.7rem] 
+  @apply  fixed top-[1rem] md:top-[2.7rem] font-bold pl-8  md:pl-[8.4rem] xl:pl-[10.2rem]
+}
+
+.home header h1 {
+  @apply block;
 }
