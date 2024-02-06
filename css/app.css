@@ -833,10 +833,6 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(120 105 190 / var(--tw-bg-opacity));
 }
-.bg-red-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
-}
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
@@ -942,6 +938,9 @@ video {
 }
 .font-light {
   font-weight: 300;
+}
+.font-normal {
+  font-weight: 400;
 }
 .uppercase {
   text-transform: uppercase;
@@ -1216,6 +1215,12 @@ header .hamburger {
   #sidebar #secondary-menu {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+}
+#sidebar a {
+  font-weight: 400;
+}
+#sidebar a:hover {
+  font-weight: 700;
 }
 #sidebar .menu {
   text-transform: lowercase;

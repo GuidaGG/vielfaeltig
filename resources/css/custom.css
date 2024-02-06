@@ -80,6 +80,10 @@ header {
     @apply my-6;
   }
 
+  a {
+    @apply font-normal hover:font-bold
+  }
+
   .menu {
     @apply lowercase
   }
