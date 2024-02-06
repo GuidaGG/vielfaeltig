@@ -81,6 +81,12 @@
 .right-4 {
     right: 1rem
 }
+.left-4 {
+    left: 1rem
+}
+.left-5 {
+    left: 1.25rem
+}
 .z-20 {
     z-index: 20
 }
@@ -144,6 +150,9 @@
 .grid {
     display: grid
 }
+.hidden {
+    display: none
+}
 .h-1 {
     height: 0.25rem
 }
@@ -194,6 +203,9 @@
 }
 .w-full {
     width: 100%
+}
+.w-8 {
+    width: 2rem
 }
 .max-w-40 {
     max-width: 10rem
@@ -647,11 +659,20 @@ body {
     outline-color: #7869BE
 }
 @media (min-width: 600px) {
+    .sm\:visible {
+        visibility: visible
+    }
+    .sm\:block {
+        display: block
+    }
     .sm\:grid-cols-2 {
         grid-template-columns: repeat(2, minmax(0, 1fr))
     }
 }
 @media (min-width: 782px) {
+    .md\:visible {
+        visibility: visible
+    }
     .md\:bottom-16 {
         bottom: 4rem
     }
@@ -673,12 +694,24 @@ body {
     .md\:left-2 {
         left: 0.5rem
     }
+    .md\:left-4 {
+        left: 1rem
+    }
+    .md\:left-5 {
+        left: 1.25rem
+    }
+    .md\:left-6 {
+        left: 1.5rem
+    }
     .md\:my-6 {
         margin-top: 1.5rem;
         margin-bottom: 1.5rem
     }
     .md\:mt-0 {
         margin-top: 0px
+    }
+    .md\:block {
+        display: block
     }
     .md\:flex {
         display: flex

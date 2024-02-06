@@ -51,17 +51,17 @@ header {
   @apply select-none ;
   
   .logo {
-    @apply relative left-2 md:left-2 xl:left-[4.5rem] text-black;
+    @apply relative left-5 md:left-6 xl:left-[4.5rem] text-black;
   }
 
   h1 {
-    @apply  text-2xl md:text-3xl xl:text-4xl font-bold
+    @apply  hidden md:block text-2xl md:text-3xl xl:text-4xl font-bold
   }
   .custom-logo-link {
     @apply relative ;
   }
   .custom-logo-link img {
-    @apply w-40 md:w-12; 
+    @apply w-8 md:w-12; 
   }
 
   .hamburger {
