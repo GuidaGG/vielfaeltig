@@ -26,10 +26,10 @@
 							<div >
               				<?php custom_logo_with_aria_label(); ?>
 						  </div>
-						  <h1>vielfältig</h1>
+						  <h1>vielfältig.</h1>
 						<?php } else { ?>
 							<a href="<?php echo get_bloginfo( 'url' ); ?>" aria-label="Hauptseite" class="font-extrabold text-lg uppercase flex" >
-								<h1>vielfältig</h1>
+								<h1>vielfältig.</h1>
 							</a>
 
 							<p class="text-sm font-light text-gray-600">

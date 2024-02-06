@@ -8,8 +8,17 @@
 
 	<?php else : ?>
 
+	
+
 		<!-- fago CONTENT CONTAINER 03 (content.php) mb-12? -->
 		<div class="entry-content max-w-screen-3xl mx-auto pt-20 pb-28 md:pt-32 px-6 md:px-20 xl:px-32">
+			<?php
+			if (!is_front_page()) {
+		
+				echo '<h1 class="stick">' . get_the_title() . '</h1>';
+
+			}
+			?>
 			<?php
 			/* translators: %s: Name of current post */
 			the_content(
