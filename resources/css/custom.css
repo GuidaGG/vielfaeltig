@@ -11,7 +11,7 @@
 html {
   font-size: var(--font-lg);
   font-feature-settings: "ss16" 1, "ss17" 1;
-  @apply leading-[1.3rem];
+  @apply leading-7 md:leading-[1.3rem];
 
 }
 .button,
@@ -188,12 +188,18 @@ header {
   } */
 
   .wp-block-details {
-    @apply border-y-2 border-gray-300 py-1 ;
-
+    @apply border-t border-gray-300 py-1 ;
+    /* box-shadow: inset  0px 1px 3px rgba(0, 0, 0, 0.1);  */
     & summary {
       @apply list-none flex justify-between items-center flex-shrink  break-all;
+      
+      
     }
 
+    summary::-webkit-details-marker {
+      display: none;
+    }
+    
     & p {
       @apply my-6;
     }

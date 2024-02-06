@@ -66,9 +66,6 @@
 .right-0 {
     right: 0px
 }
-.right-2 {
-    right: 0.5rem
-}
 .top-0 {
     top: 0px
 }
@@ -77,6 +74,12 @@
 }
 .top-\[0\.8rem\] {
     top: 0.8rem
+}
+.right-2 {
+    right: 0.5rem
+}
+.right-4 {
+    right: 1rem
 }
 .z-20 {
     z-index: 20
@@ -179,9 +182,6 @@
 }
 .w-\[80vw\] {
     width: 80vw
-}
-.w-\[calc\(100\%-0\.5rem\)\] {
-    width: calc(100% - 0.5rem)
 }
 .w-auto {
     width: auto
@@ -296,6 +296,12 @@
 }
 .border-b {
     border-bottom-width: 1px
+}
+.border-b-2 {
+    border-bottom-width: 2px
+}
+.border-t {
+    border-top-width: 1px
 }
 .border-none {
     border-style: none
@@ -449,6 +455,18 @@
 .leading-\[1\.3rem\] {
     line-height: 1.3rem
 }
+.leading-\[1\.6rem\] {
+    line-height: 1.6rem
+}
+.leading-7 {
+    line-height: 1.75rem
+}
+.leading-10 {
+    line-height: 2.5rem
+}
+.leading-6 {
+    line-height: 1.5rem
+}
 .tracking-wide {
     letter-spacing: 0.025em
 }
@@ -600,11 +618,14 @@ body {
     .md\:left-1 {
         left: 0.25rem
     }
+    .md\:right-2 {
+        right: 0.5rem
+    }
     .md\:top-\[2\.6rem\] {
         top: 2.6rem
     }
-    .md\:right-2 {
-        right: 0.5rem
+    .md\:right-1 {
+        right: 0.25rem
     }
     .md\:my-6 {
         margin-top: 1.5rem;
@@ -646,6 +667,18 @@ body {
     .md\:w-\[calc\(100\%-0\.5rem\)\] {
         width: calc(100% - 0.5rem)
     }
+    .md\:w-\[calc\(100\%-0\.1rem\)\] {
+        width: calc(100% - 0.1rem)
+    }
+    .md\:w-\[calc\(100\%-0\.2rem\)\] {
+        width: calc(100% - 0.2rem)
+    }
+    .md\:w-\[calc\(100\%-0\.3rem\)\] {
+        width: calc(100% - 0.3rem)
+    }
+    .md\:w-\[calc\(100\%-0\.4rem\)\] {
+        width: calc(100% - 0.4rem)
+    }
     .md\:grid-cols-6 {
         grid-template-columns: repeat(6, minmax(0, 1fr))
     }
@@ -679,6 +712,9 @@ body {
     .md\:text-base {
         font-size: 1rem;
         line-height: 1.5rem
+    }
+    .md\:leading-\[1\.3rem\] {
+        line-height: 1.3rem
     }
 }
 @media (min-width: 960px) {

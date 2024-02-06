@@ -785,12 +785,11 @@ video {
   border-top-left-radius: 9999px;
   border-bottom-left-radius: 9999px;
 }
-.border-y-2 {
-  border-top-width: 2px;
-  border-bottom-width: 2px;
-}
 .border-b {
   border-bottom-width: 1px;
+}
+.border-t {
+  border-top-width: 1px;
 }
 .border-none {
   border-style: none;
@@ -941,8 +940,8 @@ video {
 .leading-4 {
   line-height: 1rem;
 }
-.leading-\[1\.3rem\] {
-  line-height: 1.3rem;
+.leading-7 {
+  line-height: 1.75rem;
 }
 .tracking-wide {
   letter-spacing: 0.025em;
@@ -1059,8 +1058,14 @@ video {
 html {
   font-size: var(--font-lg);
   font-feature-settings: "ss16" 1, "ss17" 1;
-  line-height: 1.3rem;
+  line-height: 1.75rem;
 
+}
+@media (min-width: 782px) {
+
+  html {
+    line-height: 1.3rem;
+  }
 }
 .button,
 .wp-element-button {
@@ -1366,13 +1371,13 @@ header .hamburger {
     @apply w-16 h-16
   } */
 .entry-content .wp-block-details, .block-editor-block-list__layout .wp-block-details {
-  border-top-width: 2px;
-  border-bottom-width: 2px;
+  border-top-width: 1px;
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
 }
+/* box-shadow: inset  0px 1px 3px rgba(0, 0, 0, 0.1);  */
 .entry-content .wp-block-details summary, .block-editor-block-list__layout .wp-block-details summary {
   display: flex;
   flex-shrink: 1;
@@ -1381,6 +1386,9 @@ header .hamburger {
   justify-content: space-between;
   word-break: break-all;
 }
+.entry-content .wp-block-details summary::-webkit-details-marker, .block-editor-block-list__layout .wp-block-details summary::-webkit-details-marker {
+      display: none;
+    }
 .entry-content .wp-block-details p, .block-editor-block-list__layout .wp-block-details p {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
@@ -1628,8 +1636,8 @@ form .wpcf7-list-item {
     width: 500px;
   }
 
-  .md\:w-\[calc\(100\%-0\.5rem\)\] {
-    width: calc(100% - 0.5rem);
+  .md\:w-\[calc\(100\%-0\.4rem\)\] {
+    width: calc(100% - 0.4rem);
   }
 
   .md\:grid-cols-6 {
@@ -1674,6 +1682,10 @@ form .wpcf7-list-item {
   .md\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+
+  .md\:leading-\[1\.3rem\] {
+    line-height: 1.3rem;
   }
 }
 @media (min-width: 960px) {

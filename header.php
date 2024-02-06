@@ -17,7 +17,7 @@
 
 	<?php do_action( 'tailpress_header' ); ?>
 
-	<header class="fixed w-full md:w-[calc(100%-0.5rem)] z-20 bg-gradient-to-b ">
+	<header class="fixed w-full md:w-[calc(100%-0.4rem)] z-20 bg-gradient-to-b ">
 		<div class="">
 			<div class="">
 				<div class="inner-container h-16 md:h-32 max-w-screen-3xl mx-auto flex justify-between items-center">
