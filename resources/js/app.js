@@ -100,7 +100,7 @@ window.addEventListener('load', function () {
 
       elements.forEach((element, index) => {
         console.log("currentSection", currentSection, index)
-          if (element.classList.contains("stick")) {
+        if (element.classList.contains("stick")) {
               // Close the current section (if exists)
               if (currentSection) {
                 console.log("if there is already")

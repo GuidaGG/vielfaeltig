@@ -81,6 +81,12 @@
 .right-4 {
     right: 1rem
 }
+.left-4 {
+    left: 1rem
+}
+.left-5 {
+    left: 1.25rem
+}
 .z-20 {
     z-index: 20
 }
@@ -89,6 +95,21 @@
 }
 .z-50 {
     z-index: 50
+}
+.z-0 {
+    z-index: 0
+}
+.right-2 {
+    right: 0.5rem
+}
+.right-4 {
+    right: 1rem
+}
+.z-20 {
+    z-index: 20
+}
+.z-30 {
+    z-index: 30
 }
 .m-0 {
     margin: 0px
@@ -137,6 +158,9 @@
 }
 .grid {
     display: grid
+}
+.hidden {
+    display: none
 }
 .h-1 {
     height: 0.25rem
@@ -189,6 +213,9 @@
 .w-full {
     width: 100%
 }
+.w-8 {
+    width: 2rem
+}
 .max-w-40 {
     max-width: 10rem
 }
@@ -229,8 +256,21 @@
 .cursor-pointer {
     cursor: pointer
 }
+
+.select-none {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none
+}
 .scroll-mt-2 {
     scroll-margin-top: 0.5rem
+}
+.scroll-pt-20 {
+    scroll-padding-top: 5rem
+}
+.scroll-mt-2 {
+    scroll-margin-top: 0.5rem
+
 }
 .list-inside {
     list-style-position: inside
@@ -250,8 +290,14 @@
 .grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr))
 }
+.flex-row {
+    flex-direction: row
+}
 .flex-col {
     flex-direction: column
+}
+.items-start {
+    align-items: flex-start
 }
 .items-end {
     align-items: flex-end
@@ -273,6 +319,20 @@
 }
 .gap-4 {
     gap: 1rem
+}
+
+.gap-5 {
+    gap: 1.25rem
+}
+.gap-3 {
+    gap: 0.75rem
+}
+.overflow-x-hidden {
+    overflow-x: hidden
+}
+.overflow-y-scroll {
+    overflow-y: scroll
+
 }
 .overflow-y-scroll {
     overflow-y: scroll
@@ -334,6 +394,17 @@
     --tw-bg-opacity: 1;
     background-color: rgb(120 105 190 / var(--tw-bg-opacity))
 }
+
+.bg-red-200 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(254 202 202 / var(--tw-bg-opacity))
+}
+.bg-green-400 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(74 222 128 / var(--tw-bg-opacity))
+}
+
+
 .bg-gradient-to-b {
     background-image: linear-gradient(to bottom, var(--tw-gradient-stops))
 }
@@ -439,6 +510,9 @@
 }
 .font-light {
     font-weight: 300
+}
+.font-medium {
+    font-weight: 500
 }
 .uppercase {
     text-transform: uppercase
@@ -607,11 +681,20 @@ body {
     outline-color: #7869BE
 }
 @media (min-width: 600px) {
+    .sm\:visible {
+        visibility: visible
+    }
+    .sm\:block {
+        display: block
+    }
     .sm\:grid-cols-2 {
         grid-template-columns: repeat(2, minmax(0, 1fr))
     }
 }
 @media (min-width: 782px) {
+    .md\:visible {
+        visibility: visible
+    }
     .md\:bottom-16 {
         bottom: 4rem
     }
@@ -627,12 +710,30 @@ body {
     .md\:right-1 {
         right: 0.25rem
     }
+    .md\:top-\[3\.7rem\] {
+        top: 3.7rem
+    }
+    .md\:left-2 {
+        left: 0.5rem
+    }
+    .md\:left-4 {
+        left: 1rem
+    }
+    .md\:left-5 {
+        left: 1.25rem
+    }
+    .md\:left-6 {
+        left: 1.5rem
+    }
     .md\:my-6 {
         margin-top: 1.5rem;
         margin-bottom: 1.5rem
     }
     .md\:mt-0 {
         margin-top: 0px
+    }
+    .md\:block {
+        display: block
     }
     .md\:flex {
         display: flex
@@ -645,6 +746,9 @@ body {
     }
     .md\:h-32 {
         height: 8rem
+    }
+    .md\:h-20 {
+        height: 5rem
     }
     .md\:w-1\/2 {
         width: 50%
@@ -679,6 +783,17 @@ body {
     .md\:w-\[calc\(100\%-0\.4rem\)\] {
         width: calc(100% - 0.4rem)
     }
+
+    .md\:w-\[10rem\] {
+        width: 10rem
+    }
+    .md\:w-\[6rem\] {
+        width: 6rem
+    }
+    .md\:w-\[4rem\] {
+        width: 4rem
+    }
+
     .md\:grid-cols-6 {
         grid-template-columns: repeat(6, minmax(0, 1fr))
     }
@@ -723,6 +838,18 @@ body {
     }
 }
 @media (min-width: 1280px) {
+    .xl\:left-14 {
+        left: 3.5rem
+    }
+    .xl\:left-16 {
+        left: 4rem
+    }
+    .xl\:left-\[5rem\] {
+        left: 5rem
+    }
+    .xl\:left-\[4\.5rem\] {
+        left: 4.5rem
+    }
     .xl\:px-32 {
         padding-left: 8rem;
         padding-right: 8rem
@@ -730,10 +857,21 @@ body {
     .xl\:pl-40 {
         padding-left: 10rem
     }
+    .xl\:text-5xl {
+        font-size: 3rem;
+        line-height: 1
+    }
+    .xl\:text-4xl {
+        font-size: 2.25rem;
+        line-height: 2.5rem
+    }
 }
 @media (min-width: 1601px) {
     .\33xl\:pr-\[calc\(\(100vw-1615px\)\*0\.5\)\] {
         padding-right: calc((100vw - 1615px) * 0.5)
+    }
+    .\33xl\:pr-\[calc\(\(100vw-1620px\)\*0\.5\)\] {
+        padding-right: calc((100vw - 1620px) * 0.5)
     }
 }
 
