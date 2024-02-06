@@ -1154,13 +1154,13 @@ header .logo {
 @media (min-width: 782px) {
 
   header .logo {
-    left: 1.5rem;
+    left: 4.5rem;
   }
 }
 @media (min-width: 1280px) {
 
   header .logo {
-    left: 4.5rem;
+    left: 5.5rem;
   }
 }
 header h1 {
@@ -1573,7 +1573,7 @@ form .wpcf7-list-item {
 @media (min-width: 1280px) {
 
   .page .stick {
-    padding-left: 10.4rem;
+    padding-left: 10.2rem;
     font-size: 2.25rem;
     line-height: 2.5rem;
   }
@@ -1631,8 +1631,8 @@ form .wpcf7-list-item {
     bottom: 4rem;
   }
 
-  .md\:left-6 {
-    left: 1.5rem;
+  .md\:left-\[4\.5rem\] {
+    left: 4.5rem;
   }
 
   .md\:right-2 {
@@ -1705,6 +1705,11 @@ form .wpcf7-list-item {
     padding-right: 5rem;
   }
 
+  .md\:px-32 {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+
   .md\:py-10 {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
@@ -1748,8 +1753,8 @@ form .wpcf7-list-item {
 }
 @media (min-width: 1280px) {
 
-  .xl\:left-\[4\.5rem\] {
-    left: 4.5rem;
+  .xl\:left-\[5\.5rem\] {
+    left: 5.5rem;
   }
 
   .xl\:px-32 {
@@ -1757,8 +1762,13 @@ form .wpcf7-list-item {
     padding-right: 8rem;
   }
 
-  .xl\:pl-\[10\.4rem\] {
-    padding-left: 10.4rem;
+  .xl\:px-36 {
+    padding-left: 9rem;
+    padding-right: 9rem;
+  }
+
+  .xl\:pl-\[10\.2rem\] {
+    padding-left: 10.2rem;
   }
 
   .xl\:text-4xl {
