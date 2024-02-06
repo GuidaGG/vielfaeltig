@@ -287,11 +287,44 @@ input, textarea {
 
 form {
   @apply text-sm;
+  
+  > p {
+    @apply !mb-10;
+  }
+  
   .wpcf7-submit {
     @apply button max-w-40 font-bold cursor-pointer;
   }
+  
   .wpcf7-list-item {
-    @apply m-0;
+    @apply m-0 mt-2;
+    
+    /* label {
+      @apply flex flex-col;
+      @apply text-base;
+    } */
+    
+    input[type="checkbox"] {
+      @apply h-4 w-4 accent-primary mb-2;
+    }
+  }
+
+  .wpcf7-not-valid-tip {
+    @apply text-secondary;
+  }
+
+  input::file-selector-button {
+    @apply inline-block bg-lighter-bg h-10 md:h-12 rounded-full shadow-inner-special hover:shadow-md border-none text-primary font-bold cursor-pointer mr-2 my-2 px-4;
+  }
+
+  input[type=text],
+  input[type=email],
+  textarea {
+    @apply border-primary border-2 rounded-2xl py-1 px-2 mt-2;
+  }
+
+  input:focus, textarea:focus {
+    @apply outline-secondary outline-offset-0 border-transparent;
   }
 }
 
