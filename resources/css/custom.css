@@ -11,7 +11,7 @@
 html {
   font-size: var(--font-lg);
   font-feature-settings: "ss16" 1, "ss17" 1;
-  @apply leading-[1.3rem];
+  @apply leading-7 md:leading-[1.3rem];
 
 }
 .button,
@@ -84,7 +84,7 @@ header {
 
 /* --------- STICKY MENU --------- */
 #sticky-menu {
-  @apply fixed bottom-10 md:bottom-16 right-0 z-50 h-auto 3xl:pr-[calc((100vw-1620px)*0.5)];
+  @apply fixed bottom-10 md:bottom-16 right-0 md:right-2 h-auto 3xl:pr-[calc((100vw-1615px)*0.5)] z-10;
 
   ul {
     @apply flex flex-col gap-4 md:gap-8 place-items-end;
@@ -106,6 +106,15 @@ header {
 }
 
 /* --------- CONTENT --------- */
+
+.no-scrollbar {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+.no-scrollbar::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
+
 .entry-content,
 .block-editor-block-list__layout {
 
@@ -118,7 +127,7 @@ header {
 
   h2 {
     /* @apply sticky top-12 */
-    @apply text-2xl md:text-3xl pl-32 md:pl-[9.7rem] xl:pl-40 font-bold relative mt-6;
+    @apply text-2xl md:text-3xl  font-bold relative mt-6;
   }
 
   h3 {
@@ -126,7 +135,7 @@ header {
   }
 
   h1, h2, h3 {
-    @apply mb-6;
+    @apply mb-6 scroll-mt-2 md:scroll-mt-10;
   }
 
   p, ul, ol, blockquote {
@@ -179,12 +188,18 @@ header {
   } */
 
   .wp-block-details {
-    @apply border-y-2 border-gray-300 py-1 ;
-
+    @apply border-t border-gray-300 py-1 ;
+    /* box-shadow: inset  0px 1px 3px rgba(0, 0, 0, 0.1);  */
     & summary {
       @apply list-none flex justify-between items-center flex-shrink  break-all;
+      
+      
     }
 
+    summary::-webkit-details-marker {
+      display: none;
+    }
+    
     & p {
       @apply my-6;
     }
@@ -254,27 +269,7 @@ footer {
   }
 }
 
-
-/* * * * * * SPECIAL * * * * * */
-
-/* Make H1 in homepage look like normal text / Heading necessary for acessility and SEO*/
-.home main h1:first-of-type{
-  @apply text-base mb-0
-}
-
-/* reduce spacing between contact paragraph and button */ 
-.less-margin{
-  @apply mb-2 mt-2 !important
-}
-
-.anchor-padding {
-  @apply scroll-pt-20
-}
-
-.page h2 {
-  @apply sticky top-12 md:top-[3.7rem] z-50;
-}
-
+/* * * * * * FORMULARS  * * * * * */
 input, textarea {
   width: 100% !important;
 }
@@ -288,3 +283,22 @@ form {
     @apply m-0;
   }
 }
+
+
+/* * * * * * SPECIAL * * * * * */
+
+/* Make H1 in homepage look like normal text / Heading necessary for acessility and SEO*/
+.home main h1:first-of-type{
+  @apply text-base mb-0
+}
+
+/* reduce spacing between contact paragraph and button */ 
+.less-margin{
+  @apply mb-2 mt-2 !important
+}
+
+/* special classes for stick elements */
+.page .stick {
+  @apply  sticky top-[0.8rem] md:top-[2.6rem] z-50 pl-32 md:pl-[9.7rem] xl:pl-40 text-2xl md:text-3xl xl:text-4xl;
+}
+

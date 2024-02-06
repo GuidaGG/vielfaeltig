@@ -5,7 +5,7 @@
 <div class="w-full absolute bottom-0 h-28">
 	<div class="h-full max-w-screen-3xl mx-auto flex gap-4 items-end justify-end p-6">
 		<div> Zurück nach oben </div>
-		<a href="#" aria-label="Toggle navigation" class="button -rotate-90" id="sidebar-menu-toggle" >
+		<a href="#content" aria-label="Toggle navigation" class="button -rotate-90" id="sidebar-menu-toggle" >
 			<img src="<?php echo get_template_directory_uri(); ?>/resources/images/ENT_vielfaeltig_Arrow.svg" alt="Arrow Icon">
 		</a>
 	</div>
@@ -23,6 +23,41 @@
 		<div class=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 ">
 			<div>
 				<?php display_contact_info() ?>
+
+				<?php
+					$instagram_url = get_theme_mod('instagram_url', '');
+					$whatsapp_number = get_theme_mod('whatsapp_number', '');
+					$linkedin_url = get_theme_mod('linkedin_url', '');
+					$facebook_url = get_theme_mod('facebook_url', '');
+					?>
+
+					<div class="social-media-section flex gap-2 pt-5">
+						<?php if (!empty($instagram_url)) : ?>
+
+							<a href="<?php echo esc_url($instagram_url); ?>" target="_blank" rel="noopener noreferrer">
+							<img src="<?php echo get_template_directory_uri(); ?>/resources/images/vielfaeltig_Icon_Instagram.svg" alt="Instagram" class="button">
+							</a>
+						<?php endif; ?>
+
+						<?php if (!empty($whatsapp_number)) : ?>
+							<a href="https://wa.me/<?php echo esc_attr($whatsapp_number); ?>" target="_blank" rel="noopener noreferrer">
+							<img src="<?php echo get_template_directory_uri(); ?>/resources/images/vielfaeltig_Icon_WhatsApp.svg" alt="WhatsApp" class="button">
+						</a>
+						<?php endif; ?>
+
+						<?php if (!empty($linkedin_url)) : ?>
+							<a href="<?php echo esc_url($linkedin_url); ?>" target="_blank" rel="noopener noreferrer">
+							<img src="<?php echo get_template_directory_uri(); ?>/resources/images/vielfaeltig_Icon_LinkedIn.svg" alt="Linkedin" class="button">
+						</a>
+						<?php endif; ?>
+
+						<?php if (!empty($facebook_url)) : ?>
+							<a href="<?php echo esc_url($facebook_url); ?>" target="_blank" rel="noopener noreferrer">
+								<img src="<?php echo get_template_directory_uri(); ?>/resources/images/vielfaeltig_Icon_Facebook.svg" alt="Facebook" class="button">
+							</a>
+						<?php endif; ?>
+					</div>
+
 			</div>
 			<div>
 				<?php

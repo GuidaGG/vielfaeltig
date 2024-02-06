@@ -72,11 +72,20 @@
 .top-12 {
     top: 3rem
 }
-.z-0 {
-    z-index: 0
+.top-\[0\.8rem\] {
+    top: 0.8rem
 }
-.z-10 {
-    z-index: 10
+.right-2 {
+    right: 0.5rem
+}
+.right-4 {
+    right: 1rem
+}
+.z-20 {
+    z-index: 20
+}
+.z-30 {
+    z-index: 30
 }
 .z-50 {
     z-index: 50
@@ -104,6 +113,9 @@
 }
 .mb-2 {
     margin-bottom: 0.5rem
+}
+.mb-6 {
+    margin-bottom: 1.5rem
 }
 .mb-8 {
     margin-bottom: 2rem
@@ -149,6 +161,9 @@
 }
 .h-full {
     height: 100%
+}
+.h-screen {
+    height: 100vh
 }
 .min-h-screen {
     min-height: 100vh
@@ -214,8 +229,8 @@
 .cursor-pointer {
     cursor: pointer
 }
-.scroll-pt-20 {
-    scroll-padding-top: 5rem
+.scroll-mt-2 {
+    scroll-margin-top: 0.5rem
 }
 .list-inside {
     list-style-position: inside
@@ -253,11 +268,14 @@
 .justify-between {
     justify-content: space-between
 }
+.gap-2 {
+    gap: 0.5rem
+}
 .gap-4 {
     gap: 1rem
 }
-.overflow-x-hidden {
-    overflow-x: hidden
+.overflow-y-scroll {
+    overflow-y: scroll
 }
 .scroll-smooth {
     scroll-behavior: smooth
@@ -278,6 +296,12 @@
 }
 .border-b {
     border-bottom-width: 1px
+}
+.border-b-2 {
+    border-bottom-width: 2px
+}
+.border-t {
+    border-top-width: 1px
 }
 .border-none {
     border-style: none
@@ -309,10 +333,6 @@
 .bg-primary {
     --tw-bg-opacity: 1;
     background-color: rgb(120 105 190 / var(--tw-bg-opacity))
-}
-.bg-white {
-    --tw-bg-opacity: 1;
-    background-color: rgb(255 255 255 / var(--tw-bg-opacity))
 }
 .bg-gradient-to-b {
     background-image: linear-gradient(to bottom, var(--tw-gradient-stops))
@@ -435,6 +455,18 @@
 .leading-\[1\.3rem\] {
     line-height: 1.3rem
 }
+.leading-\[1\.6rem\] {
+    line-height: 1.6rem
+}
+.leading-7 {
+    line-height: 1.75rem
+}
+.leading-10 {
+    line-height: 2.5rem
+}
+.leading-6 {
+    line-height: 1.5rem
+}
 .tracking-wide {
     letter-spacing: 0.025em
 }
@@ -476,11 +508,6 @@
 }
 .transition-transform {
     transition-property: transform;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 150ms
-}
-.transition-all {
-    transition-property: all;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms
 }
@@ -591,8 +618,14 @@ body {
     .md\:left-1 {
         left: 0.25rem
     }
-    .md\:top-\[3\.7rem\] {
-        top: 3.7rem
+    .md\:right-2 {
+        right: 0.5rem
+    }
+    .md\:top-\[2\.6rem\] {
+        top: 2.6rem
+    }
+    .md\:right-1 {
+        right: 0.25rem
     }
     .md\:my-6 {
         margin-top: 1.5rem;
@@ -631,6 +664,21 @@ body {
     .md\:w-\[500px\] {
         width: 500px
     }
+    .md\:w-\[calc\(100\%-0\.5rem\)\] {
+        width: calc(100% - 0.5rem)
+    }
+    .md\:w-\[calc\(100\%-0\.1rem\)\] {
+        width: calc(100% - 0.1rem)
+    }
+    .md\:w-\[calc\(100\%-0\.2rem\)\] {
+        width: calc(100% - 0.2rem)
+    }
+    .md\:w-\[calc\(100\%-0\.3rem\)\] {
+        width: calc(100% - 0.3rem)
+    }
+    .md\:w-\[calc\(100\%-0\.4rem\)\] {
+        width: calc(100% - 0.4rem)
+    }
     .md\:grid-cols-6 {
         grid-template-columns: repeat(6, minmax(0, 1fr))
     }
@@ -665,6 +713,9 @@ body {
         font-size: 1rem;
         line-height: 1.5rem
     }
+    .md\:leading-\[1\.3rem\] {
+        line-height: 1.3rem
+    }
 }
 @media (min-width: 960px) {
     .lg\:grid-cols-3 {
@@ -681,8 +732,8 @@ body {
     }
 }
 @media (min-width: 1601px) {
-    .\33xl\:pr-\[calc\(\(100vw-1620px\)\*0\.5\)\] {
-        padding-right: calc((100vw - 1620px) * 0.5)
+    .\33xl\:pr-\[calc\(\(100vw-1615px\)\*0\.5\)\] {
+        padding-right: calc((100vw - 1615px) * 0.5)
     }
 }
 
