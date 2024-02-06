@@ -7,6 +7,9 @@
   \*****************************/
 /***/ (() => {
 
+function isMobileDevice() {
+  return typeof window.orientation !== 'undefined' || navigator.userAgent.indexOf('IEMobile') !== -1;
+}
 window.addEventListener('load', function () {
   /* --- toggle menu --- */
   var main_navigation = document.querySelector('#sidebar');
@@ -14,10 +17,21 @@ window.addEventListener('load', function () {
     e.preventDefault();
     main_navigation.classList.toggle('show');
   });
-  document.querySelector('#sidebar-menu-toggle').addEventListener('click', function (e) {
-    e.preventDefault();
-    main_navigation.classList.toggle('show');
-  });
+
+  // Close the sidebar when a link is clicked
+  if (isMobileDevice()) {
+    main_navigation.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        main_navigation.classList.toggle('show');
+      });
+    });
+  } else {
+    document.querySelector('#sidebar-menu-toggle').addEventListener('click', function (e) {
+      e.preventDefault();
+      console.log(main_navigation);
+      main_navigation.classList.toggle('show');
+    });
+  }
 
   /* --- custom buttons --- */
   var buttons = document.querySelectorAll('.wp-element-button');

@@ -277,3 +277,63 @@ class Custom_Menu_Walker extends Walker_Nav_Menu {
         }
     }
 }
+
+/* customizer socia media buttons */
+
+function my_customizer_social_media($wp_customize) {
+    // Add Social Media Section
+    $wp_customize->add_section('social_media_section', array(
+        'title' => __('Social Media', 'tailpress'),
+        'priority' => 30,
+    ));
+
+    // Add Instagram Field
+    $wp_customize->add_setting('instagram_url', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+
+    $wp_customize->add_control('instagram_url', array(
+        'label' => __('Instagram URL', 'tailpress'),
+        'section' => 'social_media_section',
+        'type' => 'text',
+    ));
+
+    // Add WhatsApp Field
+    $wp_customize->add_setting('whatsapp_number', array(
+        'default' => '',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+
+    $wp_customize->add_control('whatsapp_number', array(
+        'label' => __('WhatsApp Number', 'tailpress'),
+        'section' => 'social_media_section',
+        'type' => 'text',
+    ));
+
+    // Add LinkedIn Field
+    $wp_customize->add_setting('linkedin_url', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+
+    $wp_customize->add_control('linkedin_url', array(
+        'label' => __('LinkedIn URL', 'tailpress'),
+        'section' => 'social_media_section',
+        'type' => 'text',
+    ));
+
+     // Add Facebook Field
+     $wp_customize->add_setting('facebook_url', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+
+    $wp_customize->add_control('facebook_url', array(
+        'label' => __('Facebook URL', 'tailpress'),
+        'section' => 'social_media_section',
+        'type' => 'text',
+    ));
+}
+
+add_action('customize_register', 'my_customizer_social_media');

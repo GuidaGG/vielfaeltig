@@ -99,8 +99,17 @@
 .z-0 {
     z-index: 0
 }
-.z-10 {
-    z-index: 10
+.right-2 {
+    right: 0.5rem
+}
+.right-4 {
+    right: 1rem
+}
+.z-20 {
+    z-index: 20
+}
+.z-30 {
+    z-index: 30
 }
 .m-0 {
     margin: 0px
@@ -247,6 +256,7 @@
 .cursor-pointer {
     cursor: pointer
 }
+
 .select-none {
     -webkit-user-select: none;
        -moz-user-select: none;
@@ -257,6 +267,10 @@
 }
 .scroll-pt-20 {
     scroll-padding-top: 5rem
+}
+.scroll-mt-2 {
+    scroll-margin-top: 0.5rem
+
 }
 .list-inside {
     list-style-position: inside
@@ -306,6 +320,7 @@
 .gap-4 {
     gap: 1rem
 }
+
 .gap-5 {
     gap: 1.25rem
 }
@@ -314,6 +329,10 @@
 }
 .overflow-x-hidden {
     overflow-x: hidden
+}
+.overflow-y-scroll {
+    overflow-y: scroll
+
 }
 .overflow-y-scroll {
     overflow-y: scroll
@@ -375,6 +394,7 @@
     --tw-bg-opacity: 1;
     background-color: rgb(120 105 190 / var(--tw-bg-opacity))
 }
+
 .bg-red-200 {
     --tw-bg-opacity: 1;
     background-color: rgb(254 202 202 / var(--tw-bg-opacity))
@@ -383,6 +403,8 @@
     --tw-bg-opacity: 1;
     background-color: rgb(74 222 128 / var(--tw-bg-opacity))
 }
+
+
 .bg-gradient-to-b {
     background-image: linear-gradient(to bottom, var(--tw-gradient-stops))
 }
@@ -761,6 +783,7 @@ body {
     .md\:w-\[calc\(100\%-0\.4rem\)\] {
         width: calc(100% - 0.4rem)
     }
+
     .md\:w-\[10rem\] {
         width: 10rem
     }
@@ -770,6 +793,7 @@ body {
     .md\:w-\[4rem\] {
         width: 4rem
     }
+
     .md\:grid-cols-6 {
         grid-template-columns: repeat(6, minmax(0, 1fr))
     }

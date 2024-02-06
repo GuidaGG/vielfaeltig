@@ -9,15 +9,15 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class( 'bg-light-bg text-primary antialiased scroll-smooth overflow-x-hidden' ); ?>>
+<body <?php body_class( 'bg-light-bg text-primary antialiased no-scrollbar' ); ?>>
 
 <?php do_action( 'tailpress_site_before' ); ?>
 
-<div id="page" class="flex flex-col scroll-smooth overflow-x-hidden">
+<div id="page" class="flex flex-col scroll-smooth  h-screen overflow-y-scroll">
 
 	<?php do_action( 'tailpress_header' ); ?>
 
-	<header class="fixed w-full z-10 bg-gradient-to-b ">
+	<header class="fixed w-full md:w-[calc(100%-0.4rem)] z-20 bg-gradient-to-b ">
 		<div class="">
 			<div class="">
 				<div class="inner-container h-16 md:h-32 max-w-screen-3xl mx-auto flex justify-between items-center">
@@ -50,7 +50,7 @@
 		</div>
 	</header>
 
-	<div id="sidebar" class="fixed h-dvh top-0 right-0 translate-x-full transition-transform duration-300 ease-in-out w-[80vw] md:w-[500px] text-white px-4  py-10 z-10">
+	<div id="sidebar" class="fixed h-dvh top-0 right-0 translate-x-full transition-transform duration-300 ease-in-out w-[80vw] md:w-[500px] text-white px-4  py-10 z-30">
 		<a href="#" aria-label="Toggle navigation" class="button mb-8" id="sidebar-menu-toggle" >
 			<img src="<?php echo get_template_directory_uri(); ?>/resources/images/vielfaeltig_Icon_Pfeil_rechts.svg" alt="Arrow Icon" >
 		</a>
@@ -83,9 +83,7 @@
 		?>
 		</div>
 	</div>
-	<!-- fago CONTENT CONTAINER 01 (header.php) -->
-	<div id="content" class="flex-grow relative z-0">
-		<div role="navigation">
+	<div role="navigation">
 		<?php
 			wp_nav_menu(
 				array(
@@ -98,7 +96,10 @@
 				)
 			);
 		?>
-		</div>
+	</div>
+	<!-- fago CONTENT CONTAINER 01 (header.php) -->
+	<div id="content" class="flex-grow relative">
+
 		<?php if ( is_front_page() ) { ?>
 		
 		<?php } ?>
