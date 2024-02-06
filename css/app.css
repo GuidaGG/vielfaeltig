@@ -715,6 +715,11 @@ video {
 .cursor-pointer {
   cursor: pointer;
 }
+.select-none {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
 .scroll-pt-20 {
   scroll-padding-top: 5rem;
 }
@@ -736,6 +741,9 @@ video {
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
+.flex-row {
+  flex-direction: row;
+}
 .flex-col {
   flex-direction: column;
 }
@@ -753,6 +761,9 @@ video {
 }
 .justify-between {
   justify-content: space-between;
+}
+.gap-2 {
+  gap: 0.5rem;
 }
 .gap-4 {
   gap: 1rem;
@@ -1114,21 +1125,45 @@ header {
      -moz-user-select: none;
           user-select: none;
 }
-header .custom-logo-link {
+header .logo {
   position: relative;
   left: 0.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 @media (min-width: 782px) {
 
-  header .custom-logo-link {
-    left: 0.25rem;
+  header .logo {
+    left: 0.5rem;
   }
 }
 @media (min-width: 1280px) {
 
-  header .custom-logo-link {
-    left: 3.5rem;
+  header .logo {
+    left: 4.5rem;
   }
+}
+header h1 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+@media (min-width: 782px) {
+
+  header h1 {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+@media (min-width: 1280px) {
+
+  header h1 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+header .custom-logo-link {
+  position: relative;
 }
 header .custom-logo-link img {
   width: 10rem;
@@ -1136,7 +1171,7 @@ header .custom-logo-link img {
 @media (min-width: 782px) {
 
   header .custom-logo-link img {
-    width: 16rem;
+    width: 3rem;
   }
 }
 header .hamburger {
@@ -1535,8 +1570,8 @@ form .wpcf7-list-item {
     bottom: 4rem;
   }
 
-  .md\:left-1 {
-    left: 0.25rem;
+  .md\:left-2 {
+    left: 0.5rem;
   }
 
   .md\:top-\[3\.7rem\] {
@@ -1578,14 +1613,6 @@ form .wpcf7-list-item {
 
   .md\:w-28 {
     width: 7rem;
-  }
-
-  .md\:w-72 {
-    width: 18rem;
-  }
-
-  .md\:w-\[16rem\] {
-    width: 16rem;
   }
 
   .md\:w-\[500px\] {
@@ -1644,6 +1671,10 @@ form .wpcf7-list-item {
 }
 @media (min-width: 1280px) {
 
+  .xl\:left-\[4\.5rem\] {
+    left: 4.5rem;
+  }
+
   .xl\:px-32 {
     padding-left: 8rem;
     padding-right: 8rem;
@@ -1651,6 +1682,11 @@ form .wpcf7-list-item {
 
   .xl\:pl-40 {
     padding-left: 10rem;
+  }
+
+  .xl\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 }
 @media (min-width: 1601px) {

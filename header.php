@@ -21,12 +21,15 @@
 		<div class="">
 			<div class="">
 				<div class="inner-container h-16 md:h-32 max-w-screen-3xl mx-auto flex justify-between items-center">
-					<div>
+					<div class="flex flex-row logo gap-2 items-center">
 						<?php if ( has_custom_logo() ) { ?>
-              			<?php custom_logo_with_aria_label(); ?>
+							<div >
+              				<?php custom_logo_with_aria_label(); ?>
+						  </div>
+						  <h1>vielfältig</h1>
 						<?php } else { ?>
-							<a href="<?php echo get_bloginfo( 'url' ); ?>" aria-label="Hauptseite" class="font-extrabold text-lg uppercase">
-								<?php echo get_bloginfo( 'name' ); ?>
+							<a href="<?php echo get_bloginfo( 'url' ); ?>" aria-label="Hauptseite" class="font-extrabold text-lg uppercase flex" >
+								<h1>vielfältig</h1>
 							</a>
 
 							<p class="text-sm font-light text-gray-600">
@@ -34,6 +37,7 @@
 							</p>
 
 						<?php } ?>
+					
 					</div>
 
 					<div class="w-16 h-10 md:w-28 md:h-16 mt-20 md:mt-0 rounded-l-full bg-lighter-bg flex items-center justify-left pl-3 md:pl-4 shadow-inner-special hover:shadow-md">
