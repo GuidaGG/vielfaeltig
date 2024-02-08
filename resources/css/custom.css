@@ -138,7 +138,7 @@ header {
   }
 
   h1, h2 {
-    @apply mb-6 scroll-mt-2 md:scroll-mt-10 font-bold;
+    @apply mb-6 scroll-mt-2 md:scroll-mt-10 font-bold leading-6 md:leading-normal;
   }
 
   h3, h4, h5 {
@@ -288,7 +288,7 @@ input, textarea {
 }
 
 form {
-  @apply text-sm;
+  @apply text-xs md:text-sm;
   
   > p {
     @apply !mb-10;
@@ -356,13 +356,17 @@ form {
 
 /* special classes for stick elements */
 .page .stick {
-  @apply  sticky top-[1rem] md:top-[2.8rem] z-50 pl-36 md:pl-[8.4rem] xl:pl-[10.2rem] text-2xl md:text-3xl xl:text-4xl;
+  @apply  sticky top-[1.2rem] md:top-[2.8rem] z-50 pl-36 md:pl-[8.4rem] xl:pl-[10.2rem] text-2xl leading-6 md:leading-normal md:text-3xl xl:text-4xl;
 }
 
 .page h1.stick {
-  @apply  fixed top-[1rem] md:top-[2.7rem] font-bold pl-8  md:pl-[8.4rem] xl:pl-[10.2rem]
+  @apply  fixed -top-1 md:top-[2.7rem] font-bold pl-8  md:pl-[8.4rem] xl:pl-[10.2rem]
 }
 
 .home header h1 {
   @apply block;
+}
+
+.orange {
+  @apply text-secondary;
 }

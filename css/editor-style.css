@@ -54,6 +54,9 @@
 .sticky {
     position: sticky
 }
+.-top-2 {
+    top: -0.5rem
+}
 .bottom-0 {
     bottom: 0px
 }
@@ -72,8 +75,17 @@
 .top-12 {
     top: 3rem
 }
+.top-\[16px\] {
+    top: 16px
+}
+.-top-1 {
+    top: -0.25rem
+}
 .top-\[1rem\] {
     top: 1rem
+}
+.top-\[1\.2rem\] {
+    top: 1.2rem
 }
 .z-20 {
     z-index: 20
@@ -106,11 +118,14 @@
     margin-top: 2rem;
     margin-bottom: 2rem
 }
+.-ml-4 {
+    margin-left: -1rem
+}
 .mb-0 {
     margin-bottom: 0px
 }
-.mb-10 {
-    margin-bottom: 2.5rem
+.mb-16 {
+    margin-bottom: 4rem
 }
 .mb-2 {
     margin-bottom: 0.5rem
@@ -129,18 +144,6 @@
 }
 .mt-20 {
     margin-top: 5rem
-}
-.-ml-2 {
-    margin-left: -0.5rem
-}
-.-ml-4 {
-    margin-left: -1rem
-}
-.mb-20 {
-    margin-bottom: 5rem
-}
-.mb-16 {
-    margin-bottom: 4rem
 }
 .block {
     display: block
@@ -307,14 +310,14 @@
 .justify-between {
     justify-content: space-between
 }
+.gap-0 {
+    gap: 0px
+}
 .gap-2 {
     gap: 0.5rem
 }
 .gap-4 {
     gap: 1rem
-}
-.gap-0 {
-    gap: 0px
 }
 .overflow-y-scroll {
     overflow-y: scroll
@@ -513,9 +516,6 @@
 .leading-4 {
     line-height: 1rem
 }
-.leading-7 {
-    line-height: 1.75rem
-}
 .leading-6 {
     line-height: 1.5rem
 }
@@ -695,11 +695,11 @@ body {
     .md\:mb-20 {
         margin-bottom: 5rem
     }
-    .md\:mt-0 {
-        margin-top: 0px
-    }
     .md\:ml-0 {
         margin-left: 0px
+    }
+    .md\:mt-0 {
+        margin-top: 0px
     }
     .md\:block {
         display: block
@@ -737,11 +737,11 @@ body {
     .md\:grid-cols-6 {
         grid-template-columns: repeat(6, minmax(0, 1fr))
     }
-    .md\:gap-8 {
-        gap: 2rem
-    }
     .md\:gap-2 {
         gap: 0.5rem
+    }
+    .md\:gap-8 {
+        gap: 2rem
     }
     .md\:px-20 {
         padding-left: 5rem;
@@ -777,6 +777,9 @@ body {
     }
     .md\:leading-\[1\.3rem\] {
         line-height: 1.3rem
+    }
+    .md\:leading-normal {
+        line-height: 1.5
     }
 }
 @media (min-width: 960px) {
