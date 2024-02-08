@@ -9,7 +9,10 @@ mix.webpackConfig({
         path.posix.resolve(__dirname, './node_modules'),
         path.posix.resolve(__dirname, './css'),
         path.posix.resolve(__dirname, './js')
-    ] }
+    ] },
+    stats: {
+        children: true
+   }
 });
 
 mix.js('resources/js/app.js', 'js');
