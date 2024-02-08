@@ -91,7 +91,7 @@ window.addEventListener('load', function () {
 
   /* --- add containers to H2s--- */
   var contentContainer = document.querySelector('.home .entry-content'); // Replace with the actual class of your content container
-  //  console.log(contentContainer)
+  console.log(contentContainer);
   if (contentContainer) {
     var elements = Array.from(contentContainer.children);
     var currentSection;
