@@ -42,6 +42,9 @@
         max-width: 1601px
     }
 }
+.collapse {
+    visibility: collapse
+}
 .fixed {
     position: fixed
 }
@@ -54,8 +57,8 @@
 .sticky {
     position: sticky
 }
-.-top-2 {
-    top: -0.5rem
+.-top-1 {
+    top: -0.25rem
 }
 .bottom-0 {
     bottom: 0px
@@ -74,15 +77,6 @@
 }
 .top-12 {
     top: 3rem
-}
-.top-\[16px\] {
-    top: 16px
-}
-.-top-1 {
-    top: -0.25rem
-}
-.top-\[1rem\] {
-    top: 1rem
 }
 .top-\[1\.2rem\] {
     top: 1.2rem
@@ -118,14 +112,11 @@
     margin-top: 2rem;
     margin-bottom: 2rem
 }
-.-ml-4 {
-    margin-left: -1rem
+.-ml-3 {
+    margin-left: -0.75rem
 }
 .mb-0 {
     margin-bottom: 0px
-}
-.mb-16 {
-    margin-bottom: 4rem
 }
 .mb-2 {
     margin-bottom: 0.5rem
@@ -135,6 +126,9 @@
 }
 .mb-8 {
     margin-bottom: 2rem
+}
+.ml-1 {
+    margin-left: 0.25rem
 }
 .mr-2 {
     margin-right: 0.5rem
@@ -156,6 +150,9 @@
 }
 .flex {
     display: flex
+}
+.table {
+    display: table
 }
 .grid {
     display: grid
@@ -189,9 +186,6 @@
 }
 .h-full {
     height: 100%
-}
-.h-screen {
-    height: 100vh
 }
 .min-h-screen {
     min-height: 100vh
@@ -229,14 +223,14 @@
 .max-w-sm {
     max-width: 24rem
 }
-.flex-shrink {
-    flex-shrink: 1
-}
 .shrink-0 {
     flex-shrink: 0
 }
 .flex-grow {
     flex-grow: 1
+}
+.border-collapse {
+    border-collapse: collapse
 }
 .translate-x-0 {
     --tw-translate-x: 0px;
@@ -264,6 +258,9 @@
     -webkit-user-select: none;
        -moz-user-select: none;
             user-select: none
+}
+.scroll-mt-10 {
+    scroll-margin-top: 2.5rem
 }
 .scroll-mt-2 {
     scroll-margin-top: 0.5rem
@@ -318,9 +315,6 @@
 }
 .gap-4 {
     gap: 1rem
-}
-.overflow-y-scroll {
-    overflow-y: scroll
 }
 .scroll-smooth {
     scroll-behavior: smooth
@@ -441,17 +435,17 @@
 .pl-3 {
     padding-left: 0.75rem
 }
-.pl-36 {
-    padding-left: 9rem
-}
 .pl-4 {
     padding-left: 1rem
+}
+.pl-5 {
+    padding-left: 1.25rem
 }
 .pl-6 {
     padding-left: 1.5rem
 }
-.pl-8 {
-    padding-left: 2rem
+.pl-\[7\.9rem\] {
+    padding-left: 7.9rem
 }
 .pr-10 {
     padding-right: 2.5rem
@@ -673,17 +667,17 @@ body {
     }
 }
 @media (min-width: 782px) {
+    .md\:fixed {
+        position: fixed
+    }
     .md\:bottom-16 {
         bottom: 4rem
     }
     .md\:left-\[4\.5rem\] {
         left: 4.5rem
     }
-    .md\:right-2 {
-        right: 0.5rem
-    }
-    .md\:top-\[2\.7rem\] {
-        top: 2.7rem
+    .md\:top-\[1\.2rem\] {
+        top: 1.2rem
     }
     .md\:top-\[2\.8rem\] {
         top: 2.8rem
@@ -691,9 +685,6 @@ body {
     .md\:my-6 {
         margin-top: 1.5rem;
         margin-bottom: 1.5rem
-    }
-    .md\:mb-20 {
-        margin-bottom: 5rem
     }
     .md\:ml-0 {
         margin-left: 0px
@@ -728,11 +719,14 @@ body {
     .md\:w-\[500px\] {
         width: 500px
     }
-    .md\:w-\[calc\(100\%-0\.4rem\)\] {
-        width: calc(100% - 0.4rem)
+    .md\:w-\[calc\(100\%\)\] {
+        width: calc(100%)
     }
     .md\:scroll-mt-10 {
         scroll-margin-top: 2.5rem
+    }
+    .md\:scroll-mt-20 {
+        scroll-margin-top: 5rem
     }
     .md\:grid-cols-6 {
         grid-template-columns: repeat(6, minmax(0, 1fr))
@@ -802,14 +796,12 @@ body {
     .xl\:pl-\[10\.2rem\] {
         padding-left: 10.2rem
     }
+    .xl\:pr-\[calc\(\(100vw-1618px\)\*0\.5\)\] {
+        padding-right: calc((100vw - 1618px) * 0.5)
+    }
     .xl\:text-4xl {
         font-size: 2.25rem;
         line-height: 2.5rem
-    }
-}
-@media (min-width: 1601px) {
-    .\33xl\:pr-\[calc\(\(100vw-1615px\)\*0\.5\)\] {
-        padding-right: calc((100vw - 1615px) * 0.5)
     }
 }
 
