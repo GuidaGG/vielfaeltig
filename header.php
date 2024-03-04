@@ -13,11 +13,11 @@
 
 <?php do_action( 'tailpress_site_before' ); ?>
 
-<div id="page" class="flex flex-col scroll-smooth overflow-y-scroll min-h-screen h-screen  max-w-screen-3xl bg-blue-300 mx-auto">
+<div id="page" class="flex flex-col scroll-smooth h-auto  mx-auto">
 
 	<?php do_action( 'tailpress_header' ); ?>
 
-	<header class="fixed w-full md:w-[calc(100%-0.4rem)] z-20 bg-gradient-to-b ">
+	<header class="fixed w-full md:w-[calc(100%)] z-20 bg-gradient-to-b ">
 		<div class="">
 			<div class="">
 				<div class="inner-container h-16 md:h-32 max-w-screen-3xl mx-auto flex justify-between items-center">
@@ -40,7 +40,7 @@
 					
 					</div>
 
-					<div class="w-16 h-10 md:w-28 md:h-16 mt-20 md:mt-0 rounded-l-full -mr-2 2xl:-mr-1 bg-lighter-bg flex items-center justify-left pl-3 md:pl-4 shadow-inner-special hover:shadow-md">
+					<div class="w-16 h-10 md:w-28 md:h-16 mt-20 md:mt-0 rounded-l-full  bg-lighter-bg flex items-center justify-left pl-3 md:pl-4 shadow-inner-special hover:shadow-md">
 						<a href="#" aria-label="Navigation umschalten"  id="primary-menu-toggle">
 							<img src="<?php echo get_template_directory_uri(); ?>/resources/images/vielfaeltig_Icon_Hamburger.svg" class="hamburger" alt="Menu Icon"/>
 						</a>
