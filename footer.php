@@ -92,7 +92,7 @@
 		<div class="pt-5">
 			<?php display_footer_images() ?>
 		</div>
-		<div class="wp-full  pt-5 text-xs"><?php echo date("m.Y")?>, vielfältig. GmbH</div>
+		<div class="wp-full  pt-5 text-xs">©vielfältig. GmbH, <?php echo date("m.Y")?></div>
 	</div>
 			
 </footer>
