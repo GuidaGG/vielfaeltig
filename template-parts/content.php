@@ -3,6 +3,8 @@
 	<?php if ( is_search() || is_archive() ) : ?>
 
 		<div class="entry-summary">
+		<div class="h-40 w-full sticky top-0 left-0 bg-gradient-to-b from-light-bg from-40% to-transparent" ></div>
+			
 			<?php the_excerpt(); ?>
 		</div>
 
@@ -11,7 +13,9 @@
 	
 
 		<!-- fago CONTENT CONTAINER 03 (content.php) mb-12? -->
-		<div class="entry-content max-w-screen-3xl mx-auto pt-20 pb-28 md:pt-32 px-6 md:px-32 xl:px-36">
+		<div class="entry-content max-w-screen-3xl mx-auto pb-28  px-6 md:px-32 xl:px-36">
+			<div class="h-40 w-full sticky top-0 left-0 bg-gradient-to-b from-light-bg from-40% to-transparent" ></div>
+
 			<?php
 			if (!is_front_page()) {
 		

@@ -8,7 +8,7 @@ $popup_toggle = get_theme_mod('popup_toggle');
 // Das Pop-Up anzeigen, wenn der Umschalter auf 'An' steht
 if ($popup_toggle === 'on') {
 ?>
-<div id="popup"class="popup fixed top-16 sm:top-1/2 left-1/2 w-10/12 max-w-screen-sm 2xl:max-w-[900px] sm:-translate-y-1/2  -translate-x-1/2 z-40  text-white pb-8 sm:pb-5 bg-secondary shadow-none">
+<div id="popup"class="popup fixed top-16 pt-20 sm:top-1/2 left-1/2 w-10/12 max-w-screen-sm 2xl:max-w-[900px] sm:-translate-y-1/2  -translate-x-1/2 z-40  text-white pb-8 sm:pb-5 bg-secondary shadow-none">
 
     <div class="flex justify-between items-top ">
       <h2 class="px-5 sm:px-10 pt-12 sm:pt-0 mb-2"><?php echo esc_html($popup_title) ?></h2>
