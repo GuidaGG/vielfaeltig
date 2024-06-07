@@ -1,7 +1,6 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<div class="entry-content">
-	<div class="h-40 w-full sticky top-0 left-0 bg-gradient-to-b from-light-bg from-40% to-transparent" ></div>
 		<?php the_content(); ?>
 
 		<?php
