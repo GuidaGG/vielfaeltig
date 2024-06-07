@@ -86,7 +86,7 @@
 
 	<!-- fago CONTENT CONTAINER 01 (header.php) -->
 	<div id="content" class="flex-grow relative">
-		<div role="navigation">
+		<div role="navigation" class="hidden lg:block">
 			<?php
 				wp_nav_menu(
 					array(
@@ -105,5 +105,7 @@
 		<?php } ?>
 
 		<?php do_action( 'tailpress_content_start' ); ?>
+
+		<?php get_template_part( 'template-parts/content', 'popup' ); ?>
 
 		<main role="main">

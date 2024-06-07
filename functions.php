@@ -211,7 +211,7 @@ function my_customizer_footer_section($wp_customize) {
 add_action('customize_register', 'my_customizer_footer_section');
 
 // Display Footer Images in your theme as links
-function display_footer_images() {
+/* function display_footer_images() {
     echo '<h3>Partner*innen</h3><div class="footer-images">';
 	
     for ($i = 1; $i <= 6; $i++) {
@@ -229,8 +229,87 @@ function display_footer_images() {
     }
     
     echo '</div>';
+} */
+
+/**
+ * New system for repeating partnet logos using external plugin:kirki
+ */
+
+// Include Kirki
+if ( class_exists( 'Kirki' ) ) {
+    Kirki::add_config( 'theme_config_id', array(
+        'capability'    => 'edit_theme_options',
+        'option_type'   => 'theme_mod',
+    ) );
+
+    Kirki::add_section( 'partner_section', array(
+        'title'          => esc_html__( 'Partner', 'tailpress' ),
+        'priority'       => 200,
+    ) );
+
+    Kirki::add_field( 'theme_config_id', [
+        'type'        => 'repeater',
+        'label'       => esc_html__( 'Partners', 'tailpress' ),
+        'section'     => 'partner_section',
+        'priority'    => 10,
+        'settings'    => 'partners_repeater',
+        'default'     => [],
+        'fields' => [
+            'image' => [
+                'type'        => 'image',
+                'label'       => esc_html__( 'Image', 'tailpress' ),
+                'default'     => '',
+            ],
+            'url' => [
+                'type'        => 'url',
+                'label'       => esc_html__( 'URL', 'tailpress' ),
+                'default'     => '',
+            ],
+            'multiply' => [
+                'description' => '(if logo does not have a transparent background)',
+                'type'        => 'checkbox',
+                'label'       => esc_html__( 'Multiply', 'tailpress' ),
+                'default'     => false,
+            ],
+            'invert' => [
+                'description' => '(if the logo is black after grayscale)',
+                'type'        => 'checkbox',
+                'label'       => esc_html__( 'Invert', 'tailpress' ),
+                'default'     => false,
+            ],
+        ],
+    ] );
 }
 
+function display_footer_images() {
+    $partners = get_theme_mod('partners_repeater', []);
+    
+    if (!empty($partners)) {
+        echo '<h3>Partner*innen</h3><div class="footer-images">';
+        
+
+        foreach ($partners as $index => $partner) {
+            $image_url = isset($partner['image']) ? $partner['image'] : '';
+            $partner_url = isset($partner['url']) ? $partner['url'] : '';
+            $multiply = isset($partner['multiply']) ? $partner['multiply'] : false;
+            $invert = isset($partner['invert']) ? $partner['invert'] : false;
+
+            $multiply_filter = $multiply ? 'mix-blend-multiply' : '';
+            $invert_filter = $invert ? 'mix-blend-screen invert' : '';
+
+            
+                if ($image_url && $partner_url) {
+                    echo '<a  href="' . esc_url($partner_url) . '" target="_blank">';
+                    echo '<img class="grayscale '.$multiply_filter.' '.$invert_filter.'" src="' . esc_url($image_url) . '" alt="Partner ' . ($index + 1) . '">';
+                    echo '</a>';
+                } elseif ($image_url) {
+                    echo '<img src="' . esc_url($image_url) . '" alt="Partner ' . ($index + 1) . '">';
+                } 
+            }
+            
+            echo '</div>';
+        }
+    }
 
 
 /**
@@ -337,3 +416,75 @@ function my_customizer_social_media($wp_customize) {
 }
 
 add_action('customize_register', 'my_customizer_social_media');
+
+/* customizer pop up */
+
+
+function custom_popup_customizer_section($wp_customize) {
+ 
+    $wp_customize->add_section('custom_popup_section', array(
+        'title'    => __('Pop-Up', 'text_domain'),
+        'priority' => 160, // Nach Bedarf anpassen
+    ));
+    
+    $wp_customize->add_setting('popup_title', array(
+        'default'           => '',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+    
+    $wp_customize->add_control('popup_title', array(
+        'label'    => __('Titel', 'text_domain'),
+        'section'  => 'custom_popup_section',
+        'type'     => 'text',
+    ));
+    
+    $wp_customize->add_setting('popup_subtitle', array(
+        'default'           => '',
+        'sanitize_callback' => 'sanitize_textarea_field',
+    ));
+    
+    $wp_customize->add_control('popup_subtitle', array(
+        'label'    => __('Untertitel', 'text_domain'),
+        'section'  => 'custom_popup_section',
+        'type'     => 'textarea',
+    ));
+    
+    $wp_customize->add_setting('popup_link', array(
+        'default'           => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+    
+    $wp_customize->add_control('popup_link', array(
+        'label'    => __('Link', 'text_domain'),
+        'section'  => 'custom_popup_section',
+        'type'     => 'url',
+    ));
+
+    $wp_customize->add_setting('popup_information', array(
+        'default'           => '',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+    
+    $wp_customize->add_control('popup_information', array(
+        'label'    => __('Informationen', 'text_domain'),
+        'section'  => 'custom_popup_section',
+        'type'     => 'text',
+    ));
+    
+    $wp_customize->add_setting('popup_toggle', array(
+        'default'           => 'off',
+        'sanitize_callback' => 'sanitize_key',
+    ));
+    
+    $wp_customize->add_control('popup_toggle', array(
+        'label'    => __('Pop-Up anzeigen', 'text_domain'),
+        'section'  => 'custom_popup_section',
+        'type'     => 'radio',
+        'choices'  => array(
+            'on'  => __('An', 'text_domain'),
+            'off' => __('Aus', 'text_domain'),
+        ),
+    ));
+}
+
+add_action('customize_register', 'custom_popup_customizer_section');

@@ -137,5 +137,22 @@ window.addEventListener('load', function () {
     }
   });
 
+  /* Close Popup */ 
+  
+    const popup = document.getElementById('popup');
+    const closeButton = document.getElementById('closeButton');
+
+    // Function to hide the popup
+    function hidePopup() {
+      popup.style.display = 'none';
+    }
+
+    // Event listener for closing button
+    if(closeButton){
+      closeButton.addEventListener('click', function() {
+        hidePopup();
+      });
+    }
+
 });
 
