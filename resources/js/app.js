@@ -13,13 +13,14 @@ window.addEventListener('load', function () {
   });
 
   // Close the sidebar when a link is clicked
-  if (isMobileDevice()) {
+ 
   main_navigation.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', function () {
         main_navigation.classList.toggle('show');
       });
   });
-  }else{
+
+/*   if (!isMobileDevice()) {
     document.querySelector('#sidebar-menu-toggle').addEventListener('click', function (e) {
       e.preventDefault();
       console.log(main_navigation)
@@ -27,7 +28,7 @@ window.addEventListener('load', function () {
     });
    
   }
-
+ */
 
   /* --- custom buttons --- */
   const buttons = document.querySelectorAll('.wp-element-button');

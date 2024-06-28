@@ -185,11 +185,15 @@ header {
     @apply text-2xl md:text-3xl  font-bold relative mt-6;
   }
 
+  h3 {
+    @apply text-xl md:text-2xl font-bold pb-2;
+  }
+
   h1, h2 {
     @apply mb-6 scroll-mt-2 md:scroll-mt-10 font-bold leading-6 md:leading-normal;
   }
 
-  h3, h4, h5 {
+  h4, h5 {
     @apply text-base break-words font-bold pb-2;
   }
 
@@ -201,9 +205,11 @@ header {
     @apply leading-4
   }
 
-
+  div, p {
+    @apply scroll-mt-10 md:scroll-mt-20;
+  }
   p, ul, ol, blockquote {
-    @apply m-0 mb-4;
+    @apply m-0 mb-4 ;
     
     a {
       @apply text-primary underline break-all;
@@ -234,7 +240,7 @@ header {
   }
   
   .wp-block-quote {
-    @apply border-none pl-0 text-base;
+    @apply border-none pl-0 text-xl;
     
     p {
       @apply inline font-bold leading-3 ;
