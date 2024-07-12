@@ -72,7 +72,7 @@ window.addEventListener('load', function () {
     arrowContainer.classList.add('shrink-0');
 
     let arrowImage = document.createElement('img');
-    arrowImage.alt = 'Pfeilsymbol';
+    arrowImage.alt = 'Mehr Lesen, Pfeilsymbol';
     arrowImage.className = 'transition-transform duration-200';
     arrowImage.src = `${themeData.templateDirectoryUri}/resources/images/vielfaeltig_Icon_Plus.svg`;
 
