@@ -5,8 +5,8 @@
 <div class="w-full absolute bottom-0 h-28">
 	<div class="h-full max-w-screen-3xl mx-auto flex gap-4 items-end justify-end p-6">
 		<div> Zurück nach oben </div>
-		<a href="#content" aria-label="Toggle navigation" class="button -rotate-90" id="sidebar-menu-toggle" >
-			<img src="<?php echo get_template_directory_uri(); ?>/resources/images/ENT_vielfaeltig_Arrow.svg" alt="Arrow Icon">
+		<a href="#content" aria-label="Zurück nach oben" class="button -rotate-90" id="sidebar-menu-toggle" >
+			<img src="<?php echo get_template_directory_uri(); ?>/resources/images/ENT_vielfaeltig_Arrow.svg" alt=" Zurück nach oben">
 		</a>
 	</div>
 </div>
