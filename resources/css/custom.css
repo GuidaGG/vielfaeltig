@@ -294,7 +294,7 @@ header {
 /* --------- FOOTER --------- */
 footer {
   .footer-images {
-    @apply grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 pb-0 ;
+    @apply grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 pb-0 gap-8 pr-6 ;
 
     img { 
       @apply w-auto max-h-20 ;
