@@ -143,10 +143,10 @@ header {
 
 /* --------- STICKY MENU --------- */
 #sticky-menu {
-  @apply absolute md:fixed bottom-10 md:bottom-16 right-0 h-auto xl:pr-[calc((100vw-1618px)*0.5)] z-10; 
+  @apply absolute md:fixed bottom-10 md:bottom-2 2xl:bottom-16 right-0 h-auto xl:pr-[calc((100vw-1618px)*0.5)] z-10; 
 
   ul {
-    @apply flex flex-col gap-4 md:gap-8 place-items-end;
+    @apply flex flex-col gap-4 md:gap-2 2xl:gap-6 place-items-end;
   }
 
   li {
@@ -294,13 +294,26 @@ header {
 /* --------- FOOTER --------- */
 footer {
   .footer-images {
-    @apply grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 pb-0 gap-8 pr-6 ;
+     @apply grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-6 pb-0 gap-2 pr-0 md:gap-6 lg:pr-16 xl:pr-4 pt-2 ;
 
-    img { 
-      @apply w-auto max-h-20 ;
+    a {
+      @apply p-0;
     }
+    img { 
+      @apply w-auto  ;
+    } 
+
+    
+/*     @apply flex pb-0 gap-0  flex-wrap ;
+    
+    a, img {
+      @apply w-auto h-20 p-0;
+    }
+    a img { 
+      @apply w-full h-auto  max-h-20 ;
+    }*/
   
-  }
+  } 
 
   a {
     @apply flex font-bold tracking-wide pb-4 items-center;
@@ -432,4 +445,81 @@ form {
 
 .orange {
   @apply text-secondary;
+}
+
+/* rapidmail */
+/* temporary css for newsletter */
+
+
+.rmBase__comp--privacy {
+
+	display: flex;
+	gap: 20px;
+	font-size: 0.6em;
+	line-height: 2em;
+}
+
+.rmBase__comp--privacy figure {
+	@apply w-full md:w-1/6;
+}
+
+.rmBase__el--input, 
+.rmBase__el--consent,
+.rmBase__comp--cta{
+	margin-bottom: 2.5rem;
+}
+
+.rmBase__comp--heading {
+	font-size: 1rem;
+	line-height: 1.rem
+}
+.rmBase__el--text {
+	margin-bottom: calc(0.5rem + 15px);
+	font-size: 1rem;
+	line-height: 1.3rem
+}
+
+.rmBase__comp--cta{
+	 --tw-bg-opacity: 1;
+    background-color: rgb(242 242 242 / var(--tw-bg-opacity));
+    border-radius: 9999px;
+    box-shadow: inset 0 6px 6px 0 rgb(0 0 0 / .2);
+    cursor: pointer;
+    display: block;
+    font-weight: 700;
+    height: 2.5rem;
+    max-width: 10rem;
+    padding: 0;
+    width: 100%;
+}
+  
+.rmBase__comp--cta:hover {
+	--tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -2px rgba(0, 0, 0, .1);
+    --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.rmBase__body .rmSubscription {
+  padding-bottom: 20vh;
+}
+
+/* Video Buttons */
+.wp-block-video{
+  position: relative;
+}
+
+.wp-block-video:hover .video-buttons {
+  @apply hidden md:flex;
+}
+
+body .video-buttons {
+  display: none;
+  position: absolute;
+  top: 050%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.wp-block-buttons>.wp-block-button.hide-button {
+  display: none;
 }
