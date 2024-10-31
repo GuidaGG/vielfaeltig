@@ -131,7 +131,13 @@ window.addEventListener('load', function () {
   stickyMenu.childNodes.forEach(function (child) {
     let anchor = child.firstChild;
     if (anchor) {
-      anchor.setAttribute('target', '_blank');
+      const anchorUrl = new URL(anchor.href);
+        
+      // Check if the link is external by comparing hostnames
+      if (anchorUrl.hostname !== window.location.hostname) {
+          anchor.setAttribute('target', '_blank');
+      }
+
       let arr = anchor.innerHTML.split('<br>');
       let text = `<span>${arr[0]}</span><br><span>${arr[1]}</span>`;
       anchor.innerHTML = text;
@@ -155,5 +161,48 @@ window.addEventListener('load', function () {
       });
     }
 
+    /* Video block */
+
+    const videoBlocks = document.querySelectorAll('.wp-block-video');
+
+    // Loop through each video block
+    videoBlocks.forEach(videoBlock => {
+        const video = videoBlock.querySelector('video'); // Get the video element inside wp-block-video
+        const parentDiv = videoBlock.parentElement; // Get the parent element that contains buttons
+        const playButton = parentDiv.querySelector('.play-button'); // Get the play button in the same parent div
+        const pauseButton = parentDiv.querySelector('.pause-button'); // Get the pause button in the same parent div
+
+        // Check if the video is already playing (autoplay might have worked)
+        if (!video.paused) {
+            playButton.classList.add('hide-button'); // Hide play button if the video is playing
+        } else {
+            pauseButton.classList.add('hide-button'); // Hide pause button if the video is paused
+        }
+
+        // Add click event for play button
+        playButton.addEventListener('click', function () {
+            video.play(); // Play the video
+            playButton.classList.add('hide-button'); // Hide the play button
+            pauseButton.classList.remove('hide-button'); // Show the pause button
+        });
+
+        // Add click event for pause button
+        pauseButton.addEventListener('click', function () {
+            video.pause(); // Pause the video
+            pauseButton.classList.add('hide-button'); // Hide the pause button
+            playButton.classList.remove('hide-button'); // Show the play button
+        });
+
+        // Listen for changes to playback state (optional in case autoplay fails)
+        video.addEventListener('play', function () {
+            playButton.classList.add('hide-button');
+            pauseButton.classList.remove('hide-button');
+        });
+
+        video.addEventListener('pause', function () {
+            pauseButton.classList.add('hide-button');
+            playButton.classList.remove('hide-button');
+        });
+    });
 });
 
